@@ -1,15 +1,5 @@
-== Installation de vos Box Jeedom
+== How to ... ? (Comment faire pour ... ?)
 
-[[buildMini]]
-=== Assembler la mini
-include::buildMini.asciidoc[]
-
-'''
-[[firstUseMini]]
-=== Premiers pas
-include::firstUseMini.asciidoc[]
-
-'''
-[[firstUseMiniPlus]]
+[[Mettre en marche ma Mini+]]
 === Déballage et installation de la Mini+
-include::firstUseMiniPlus.asciidoc[]
+include::mini.demarrage.asciidoc[]
