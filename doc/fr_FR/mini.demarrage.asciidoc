@@ -10,33 +10,33 @@ Le carton de la Jeedom Mini+ que vous avez reçu doit contenir :
 *   _Un module RFXcom 433E avec son câble usb._ (Seulement si vous avez acheté le pack de démarrage avec interface RFXcom).
 *   _Une carte RaZberry Z-Wave+._ (Seulement si vous avez acheté le pack de démarrage compatible Z-Wave+) (Cette carte est normalement déjà installée dans la box)
 
-image::../images/firstUseMiniPlus01.png[]
+image::../images/mini.demarrage01.png[]
 
 Avant de pouvoir l'utiliser, vous devez brancher votre box Jeedom Mini+ sur votre réseau local (sur routeur, switch ou votre box internet...), et sur le secteur.
 
-image::../images/firstUseMiniPlus02.png[]
+image::../images/mini.demarrage02.png[]
 
-image::../images/firstUseMiniPlus03.png[]
+image::../images/mini.demarrage03.png[]
 
 Avant de commencer, veuillez noter que Jeedom fonctionne à l'aide de plugins. Plusieurs plugins sont préinstallés sur votre Jeedom Mini+ :
 
-image::../images/firstUseMiniPlus04.png[]
+image::../images/mini.demarrage04.png[]
 
 Le plugin Z-Wave qui sert à configurer son réseau Z-Wave et à ajouter de nouveaux modules Z-Wave.
 
-image::../images/firstUseMiniPlus05.png[]
+image::../images/mini.demarrage05.png[]
 
 Le plugin Mail.
 
-image::../images/firstUseMiniPlus06.png[]
+image::../images/mini.demarrage06.png[]
 
 Les plugins Widget et Script.
 
-image::../images/firstUseMiniPlus07.png[]
+image::../images/mini.demarrage07.png[]
 
 Le plugin Météo.
 
-image::../images/firstUseMiniPlus08.png[]
+image::../images/mini.demarrage08.png[]
 
 Vous trouverez encore de nombreux autres plugins directement via l'interface Jeedom sur le Market Jeedom.
 
@@ -44,7 +44,7 @@ Par ailleurs, n'oubliez pas que vous disposez de 2 bons de réductions (Envoyés
 
 Dans le mail que vous avez reçu, figure aussi le numéro du service pack associé à la Jeedom Mini+. Vous pouvez le renseigner sur votre profil du Market, cela vous permettra entre autre d'accéder aux différents services correpondants à votre service pack.
 
-image::../images/firstUseMiniPlus09.png[]
+image::../images/mini.demarrage09.png[]
 
 Vous pouvez maintenant suivre la documentation : 
 http://doc.jeedom.fr/fr_FR/doc-premiers-pas.html[Premiers pas avec Jeedom] Qui vous permettra de trouver l'adresse IP de votre Jeedom Mini+ et de vous y connecter afin de commencer à la paramètrer et à l'utiliser.
@@ -52,7 +52,3 @@ http://doc.jeedom.fr/fr_FR/doc-premiers-pas.html[Premiers pas avec Jeedom] Qui v
 Pour approfondir la découverte et l'utilisation de Jeedom, vous disposez d'une documentation complète : http://doc.jeedom.fr/[Documentation Jeedom] et également d'une section répertoriant les tutoriels vidéo : https://jeedom.fr/video.php[Tutos vidéos]. N'hésitez pas à vous rendre sur le Forum de Jeedom pour toute autre question : https://forum.jeedom.fr/[Forum Jeedom].
 
 Merci, et bonne découverte de la domotique avec Jeedom.
-
-
-
-
