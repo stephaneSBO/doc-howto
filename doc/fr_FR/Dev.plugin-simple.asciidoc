@@ -50,7 +50,6 @@ Ce fichier ne doit contenir que des pointeurs sur l'ensemble des autres fichiers
 
 Exemple de fichier *index.asciidoc* :
 
-[source,asciidoc]
 ----
 :icons:
 
@@ -74,3 +73,5 @@ include::faq.asciidoc[]
 === Règles
 
 ==== Les images
+
+A compléter
