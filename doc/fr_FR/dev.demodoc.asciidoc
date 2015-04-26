@@ -46,7 +46,9 @@ function saveJsonTheme() {
 }
 ----
 
-Bloc succes
+== Bloc
+
+=== Bloc succes
 
 [alert,success]
 .Well done!
@@ -54,26 +56,69 @@ Bloc succes
 You successfully read this important alert message.
 --
 
-Bloc information
+=== Bloc information
 
 [alert,info]
-Heads up!
+.Heads up!
 --
 This alert needs your attention, but it's not super important.
 --
 
-Bloc Attention
+=== Bloc Attention
 
 [alert,warning]
-Warning!
+.Warning!
 --
 Better check yourself, you're not looking too good.
 --
 
-Bloc Danger
+=== Bloc Danger
 
 [alert,danger]
 .Oh snap!
 --
 Change a few things up and try submitting again.
+--
+
+== Panel
+
+[panel,primary]
+.Panel title
+--
+Panel content
+--
+
+[panel,success]
+.Panel title
+--
+Panel content
+--
+
+[panel,info]
+.Panel title
+--
+Panel content
+--
+
+[panel,warning]
+.Panel title
+--
+Panel content
+--
+
+[panel,danger]
+.Panel title
+--
+Panel content
+--
+
+[panel]
+.Panel title
+--
+Panel content
+--
+
+[panel]
+--
+Basic panel example
 --
