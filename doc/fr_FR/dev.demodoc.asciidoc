@@ -1,7 +1,7 @@
 :imagesdir: ../images
 :icons:
 
-=== Insertion d'une image
+== Insertion d'une image
 
 Copier vos images dans le répertoire *doc/images* de votre plugin. +
 Vos fichiers images doivent être préfixés par `nom de votre plugin suivi de _`
@@ -123,6 +123,12 @@ Panel content
 Basic panel example
 --
 
+progress:40[role="info",caption="40% complete"]
+
+progress:60[role="warning",caption="60% complete"]
+
+progress:45[striped=""]
+
 link:get-started.html["Start Tour",role="primary"]
 
 link:get-started.html["Start Tour",role="info",icon="glyphicon-play-circle"]
@@ -154,9 +160,3 @@ Font Awesome, Glyphicons, and Ionicons simultaneously.
 ====
 
 unfloat::[]
-
-progress:40[role="info",caption="40% complete"]
-
-progress:60[role="warning",caption="60% complete"]
-
-progress:45[striped=""]
