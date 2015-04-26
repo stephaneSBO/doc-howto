@@ -42,6 +42,13 @@ Nous détaillerons dans ce document, comment générer vos pages en local pour v
 
 Plusieurs fichiers asciidoc (extension de vos fichiers) permettent de structurer votre documentation.
 
+Vous devez au minimum avoir les fichiers asciidoc suivants :
+
+* index.asciidoc
+* description.asciidoc
+* installation.asciidoc
+* configuration.asciidoc
+
 === index.asciidoc
 
 Le fichier index.asciidoc est, comme son nom l'indique, la racine de votre documentation.
@@ -69,6 +76,10 @@ include::configuration.asciidoc[]
 === FAQ
 include::faq.asciidoc[]
 ----
+
+=== description.asciidoc
+=== installation.asciidoc
+=== configuration.asciidoc
 
 == Règles
 
