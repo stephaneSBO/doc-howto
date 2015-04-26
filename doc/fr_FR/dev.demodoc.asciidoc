@@ -57,7 +57,7 @@ You successfully read this important alert message.
 Bloc information
 
 [alert,info]
-.Heads up!
+Heads up!
 --
 This alert needs your attention, but it's not super important.
 --
@@ -65,7 +65,7 @@ This alert needs your attention, but it's not super important.
 Bloc Attention
 
 [alert,warning]
-.Warning!
+Warning!
 --
 Better check yourself, you're not looking too good.
 --
