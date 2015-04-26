@@ -1,0 +1,26 @@
+:imagesdir: ../images
+:icons:
+
+=== Insertion d'une image
+
+Copier vos images dans le répertoire *doc/images* de votre plugin. +
+Vos fichiers images doivent être préfixés par `nom de votre plugin suivi de _`
+
+Exemples :
+
+* virtuel_logo.png
+* greenmomit_config_01.png
+
+En haut de votre fichier scpécifier la variable :imagesdir:
+
+[source,asciidoc]
+----
+:imagesdir: ../images
+----
+
+Enfin insérer à l'endroit désiré votre image
+
+[source,asciidoc]
+----
+image:greenmomit_icon.png[]
+----
