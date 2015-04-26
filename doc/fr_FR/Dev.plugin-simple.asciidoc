@@ -1,16 +1,16 @@
 == Description
 
-=== Description marketing :)
+=== Description et objectifs
 
 [role="col-md-12 text-justify"]
 --
 Cette documentation vous premettra d'apprehender le système de documentation intégré dans jeedom : AsciiDoc
 
-L'objectif est :
+Objectifs :
 
-* de vous présenter le fonctionnement de l'AsciiDoc
-* de vous présenter la structure des différents documents nécessaires
-* de fournir un minimum de règles pour harmoniser l'ensemble des documents Jeedom
+* présenter le fonctionnement de l'AsciiDoc
+* présenter la structure des différents documents nécessaires
+* fournir un minimum de règles pour harmoniser l'ensemble des documents Jeedom
 
 --
 image:../images/dev.plugin-simple.01.jpg[width=400,role="img-thumbnail"]
