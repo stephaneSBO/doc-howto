@@ -122,3 +122,5 @@ Panel content
 --
 Basic panel example
 --
+
+link:get-started.html["Start Tour",role="primary"]
