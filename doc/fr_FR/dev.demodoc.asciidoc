@@ -23,16 +23,25 @@ Enfin insérer à l'endroit désiré votre image
 image:greenmomit_icon.png[]
 ----
 
-[source,ruby]
+Insérer du bash / shell
+
+[source,shell]
 ----
-include::example.rb[]
+# crontab -l
+* * * * * su --shell=/bin/bash - www-data -c '/usr/bin/php /usr/share/nginx/www/jeedom/core/php/jeeCron.php' >> /dev/null
+* * * * * su --shell=/bin/bash - www-data -c 'nice -n 1
 ----
 
-[source,python]
- -------------------------------------------
- \include::test.py[]
- -------------------------------------------
+Insérer du html
+[source,html]
+----
+<input class="eqLogicAttr" hidden data-l1key="configuration" data-l2key="bsTextJSON"/>
 
- <1> Print statement.
-
- 
+<script>
+function loadJsonTheme (themes) {
+...
+}
+function saveJsonTheme() {
+....
+}
+----
