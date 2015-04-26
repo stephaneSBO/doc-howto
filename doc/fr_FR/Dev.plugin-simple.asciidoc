@@ -17,11 +17,11 @@ Objectifs :
 
 --
 
-=== Fonctionnement de l'AsciiDoc
+== Fonctionnement de l'AsciiDoc
 
 A documenter
 
-==== Généralité
+=== Généralité
 
 Asciidoc est un langage de balisage léger. C'est aussi le nom de la suite logicielle qui permet de transformer les fichiers "texte source" en documents publiables.
 
@@ -30,7 +30,7 @@ Asciidoc est un langage de balisage léger. C'est aussi le nom de la suite logic
 
 Site officiel : http://www.methods.co.nz/asciidoc/
 
-==== AsciiDoc & Jeedom
+=== AsciiDoc & Jeedom
 
 La documentation Jeedom s'appuie sur l'AsciiDoc et sur l'adjonction du bootstap de Laurent Laville : http://laurent-laville.org/asciidoc/bootstrap/
 
@@ -38,11 +38,11 @@ Cette particularité permet d'ajouter des fonctions supplémentaires au fonction
 Nous détaillerons dans ce document, comment générer vos pages en local pour valider la mise en forme.
 
 
-=== Structure des fichiers AsciiDoc
+== Structure des fichiers AsciiDoc
 
 Plusieurs fichiers asciidoc (extension de vos fichiers) permettent de structurer votre documentation.
 
-==== index.asciidoc
+=== index.asciidoc
 
 Le fichier index.asciidoc est, comme son nom l'indique, la racine de votre documentation.
 
@@ -70,8 +70,8 @@ include::configuration.asciidoc[]
 include::faq.asciidoc[]
 ----
 
-=== Règles
+== Règles
 
-==== Les images
+=== Les images
 
 A compléter
