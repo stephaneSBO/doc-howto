@@ -1,10 +1,9 @@
+:imagesdir: ../images
 == Description
-
-=== Description et objectifs
 
 [role="col-md-12 text-justify"]
 
-image:../images/dev.plugin-simple.01.jpg[width=400,role="img-thumbnail"]
+image:dev.plugin-simple.01.jpg[width=400,role="img-thumbnail"]
 
 --
 Cette documentation vous premettra d'apprehender le système de documentation intégré dans jeedom : AsciiDoc
