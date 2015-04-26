@@ -3,6 +3,9 @@
 === Description et objectifs
 
 [role="col-md-12 text-justify"]
+
+image:../images/dev.plugin-simple.01.jpg[width=400,role="img-thumbnail"]
+
 --
 Cette documentation vous premettra d'apprehender le système de documentation intégré dans jeedom : AsciiDoc
 
@@ -13,4 +16,15 @@ Objectifs :
 * fournir un minimum de règles pour harmoniser l'ensemble des documents Jeedom
 
 --
-image:../images/dev.plugin-simple.01.jpg[width=400,role="img-thumbnail"]
+
+=== Fonctionnement de l'AsciiDoc
+
+A documenter
+
+=== Structure des fichiers AsciiDoc
+
+A documenter
+
+=== Règles
+
+==== Les images
