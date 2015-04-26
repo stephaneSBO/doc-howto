@@ -1,4 +1,6 @@
 :imagesdir: ../images
+:icons:
+
 ==== Installer le plugin
 
 [role="col-md-12 text-justify"]
