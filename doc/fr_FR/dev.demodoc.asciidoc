@@ -13,14 +13,12 @@ Exemples :
 
 En haut de votre fichier scpécifier la variable :imagesdir:
 
-[source,asciidoc]
 ----
 :imagesdir: ../images
 ----
 
 Enfin insérer à l'endroit désiré votre image
 
-[source,asciidoc]
 ----
 image:greenmomit_icon.png[]
 ----
