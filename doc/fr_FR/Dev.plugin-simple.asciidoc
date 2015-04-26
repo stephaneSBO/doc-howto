@@ -6,7 +6,7 @@
 image:dev.plugin-simple.01.jpg[width=400,role="img-thumbnail"]
 
 --
-Cette documentation vous premettra d'apprehender le système de documentation intégré dans jeedom : AsciiDoc
+Cette documentation vous permettra d'appréhender le système de documentation intégré dans jeedom : AsciiDoc
 
 Objectifs :
 
@@ -36,6 +36,10 @@ La documentation Jeedom s'appuie sur l'AsciiDoc et sur l'adjonction du bootstap 
 Cette particularité permet d'ajouter des fonctions supplémentaires au fonctions présentes dans l'AsciiDoc. Mais nécessite aussi une compilation particulière pour avoir une visibilité sur le rendu final. {nbsp} +
 Nous détaillerons dans ce document, comment générer vos pages en local pour valider la mise en forme.
 
+=== Un peu de syntaxe
+
+Ce lien est un pense bête des syntaxes asciidoc : http://powerman.name/doc/asciidoc
+
 
 == Structure des fichiers AsciiDoc
 
@@ -57,10 +61,11 @@ Ce fichier ne doit contenir que des pointeurs sur l'ensemble des autres fichiers
 Exemple de fichier *index.asciidoc* :
 
 ----
+:imagesdir: ../images
 :icons:
 
 == Greenmomit
-image::../images/greenmomit_icon.png[]
+image:greenmomit_icon.png[]
 
 {nbsp} +
 
