@@ -9,10 +9,10 @@ Cette documentation vous premettra d'apprehender le système de documentation in
 L'objectif est :
 * de vous présenter le fonctionnement de l'AsciiDoc
 * de vous présenter la structure des différents documents nécessaires
-* de fournir un minimum de règles pour harmoniser l'ensemble des documents Jeedom 
+* de fournir un minimum de règles pour harmoniser l'ensemble des documents Jeedom
 
 --
-image:../images/greenmomit.jpg[width=400,role="img-thumbnail"]
+image:../images/dev.plugin-simple.01.jpg[width=400,role="img-thumbnail"]
 --
 Alimenté sur secteur, le thermostat se connecte à la chaudière via un contact inverseur sans potentiel. Connecté au réseau WiFi de votre domicile, vous pouvez accéder à votre système de chauffage à partir de n´importe quel ordinateur, smartphone ou tablette.
 Le thermostat intelligent Momit ST se démarque de ses concurrents en offrant différentes fonctionnalités innovantes :
