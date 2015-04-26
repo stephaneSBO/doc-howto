@@ -128,3 +128,7 @@ progress:40[role="info",caption="40% complete"]
 progress:60[role="warning",caption="60% complete"]
 
 progress:45[striped=""]
+
+link:get-started.html["Start Tour",role="primary"]
+
+link:get-started.html["Start Tour",role="info",icon="glyphicon-play-circle"]
