@@ -22,3 +22,17 @@ Enfin insérer à l'endroit désiré votre image
 ----
 image:greenmomit_icon.png[]
 ----
+
+[source,ruby]
+----
+include::example.rb[]
+----
+
+[source,python]
+ -------------------------------------------
+ \include::test.py[]
+ -------------------------------------------
+
+ <1> Print statement.
+
+ 
