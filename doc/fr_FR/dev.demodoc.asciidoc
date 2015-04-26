@@ -132,3 +132,7 @@ progress:45[striped=""]
 link:get-started.html["Start Tour",role="primary"]
 
 link:get-started.html["Start Tour",role="info",icon="glyphicon-play-circle"]
+
+link:get-started.html["Whats wrong",role="danger",icon="glyphicon-remove-circle",options="right,white"]
+
+image:icons/font-awesome/calendar.png[alt="calendar",icon="calendar",size="4x",iconsfont="font-awesome"] by Laurent Laville, published on November 21, 2013
