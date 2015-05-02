@@ -170,6 +170,9 @@ Si votre plugin n'a aucune spécification sur son installation, ajouter juste un
 
 http://doc.jeedom.fr/fr_FR/core.html#plugin[*Installation d'un plugin*]
 
+|kbd:[Ctrl+T]
+|Open a new tab
+
 === configuration.asciidoc
 
 == Règles
