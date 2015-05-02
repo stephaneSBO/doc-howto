@@ -168,7 +168,7 @@ Si votre plugin n'a aucune spécification sur son installation, ajouter juste un
 
 :linkattrs:
 
-http://doc.jeedom.fr/fr_FR/core.html#plugin
+http://doc.jeedom.fr/fr_FR/core.html#plugin[*Installation d'un plugin*^, role="green"]
 
 === configuration.asciidoc
 
