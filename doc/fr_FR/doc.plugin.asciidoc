@@ -1,5 +1,6 @@
 :imagesdir: ../images
 :experimental:
+:linkattrs:
 
 == Description
 
@@ -167,8 +168,6 @@ Lister et décrire les présrequis à l'installation et l'utilisation du plugin
 === installation.asciidoc
 
 Si votre plugin n'a aucune spécification sur son installation, ajouter juste un pointeur vers la procédure d'installation d'un plugin décrit dans la documentation du core Jeedom :
-
-:linkattrs:
 
 http://doc.jeedom.fr/fr_FR/core.html#plugin[*Installation d'un plugin*]
  kbd:[Ctrl+mouse clic] (pour ouvrir dans un nouvel onglet)
