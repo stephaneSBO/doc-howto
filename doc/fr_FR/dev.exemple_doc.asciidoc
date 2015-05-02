@@ -10,9 +10,9 @@
 include::dev.exemple_doc.description.asciidoc[]
 
 '''
-=== Configuration
-include::dev.greenmomit.configuration.asciidoc[]
+// === Configuration
+// include::dev.greenmomit.configuration.asciidoc[]
 
-'''
-=== FAQ
-include::dev.greenmomit.faq.asciidoc[]
+// '''
+// === FAQ
+// include::dev.greenmomit.faq.asciidoc[]
