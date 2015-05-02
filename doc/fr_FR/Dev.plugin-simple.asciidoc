@@ -81,7 +81,86 @@ include::configuration.asciidoc[]
 include::faq.asciidoc[]
 ----
 
+Les fichiers asciidoc inclus sont
+
+* description.asciidoc
+* installation.asciidoc
+* configuration.asciidoc
+* faq.asciidoc
+
+Ces fichiers correspondent à la base de la structure de la documentation Jeedom.
+Il est possible d'inclure d'autres fichier AsciiDoc.
+
 === description.asciidoc
+
+Le fichier *description.asciidoc* vous permet de présenter votre votre plugin.
+
+==== Plugin simple
+
+Si votre plugin est relativement simple, n'a pas de dépendance avec un équipement particulier à présenter, vous pouvez vous limiter à une description de l'objectif du plugin.
+
+Exemple de fichier *description.asciidoc* simple :
+
+----
+:imagesdir: ../images
+:icons:
+
+==== Générale
+
+Ce Plugin à pour objectif de BLABLABLA.
+
+Une petite copie d'écran du rendu du widget du plugin :
+
+image:nomduplugin_widget.png[]
+
+----
+
+==== Plugin complexe
+
+Si votre plugin est :
+* dépendant d'un équipement tier
+* nécessite quelques présrequis
+* nécessite une explication sur le principe de fonctionnement.
+
+Il est conseillé de créer plusieurs sous-chapitre.
+
+* *Desciption générale* +
+* *Description marketing :)*
+* *Les présrequis*
+* *Principe de fonctionnement*
+
+Exemple de fichier *description.asciidoc* complexe :
+
+----
+:imagesdir: ../images
+:icons:
+
+==== Générale
+
+Ce Plugin à pour objectif de BLABLABLA.
+
+Une petite copie d'écran du rendu du widget du plugin :
+
+image:nomduplugin_widget.png[]
+
+// Si le plugin est dépendant d'un équipement ou solution logiciel tier, le présenter
+==== Présentation de l'équipement ou application XXX
+//ajouter une image de l'équipement
+image:nomduplugin_equipementXXX.png[]
+
+Décrire l'équipement, ajouter des liens vers le consructeur ou sites de référence.
+Décrire le niveau d'intégration de l'équipement dans Jeedom (complète, incomplète et quelles fonctionnalités n'est pas implémentées)
+
+// Si il est nécessaire de présenter le principe de fonctionnement :
+==== Principe de fonctionnement
+Décrire l'architecture et la philosophie du plugin.
+
+==== Présrequis
+Lister et décrire les présrequis à l'installation et l'utilisation du plugin
+* ex : une clé API à demander
+
+----
+
 === installation.asciidoc
 === configuration.asciidoc
 
