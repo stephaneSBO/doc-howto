@@ -1,0 +1,18 @@
+:imagesdir: ../images
+:icons:
+
+== Exemple Doc
+
+
+{nbsp} +
+
+=== Description
+include::dev.exemple_doc.description.asciidoc[]
+
+'''
+=== Configuration
+include::dev.greenmomit.configuration.asciidoc[]
+
+'''
+=== FAQ
+include::dev.greenmomit.faq.asciidoc[]

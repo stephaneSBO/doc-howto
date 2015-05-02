@@ -118,6 +118,7 @@ image:nomduplugin_widget.png[]
 ==== Plugin complexe
 
 Si votre plugin est :
+
 * dépendant d'un équipement tier
 * nécessite quelques présrequis
 * nécessite une explication sur le principe de fonctionnement.
