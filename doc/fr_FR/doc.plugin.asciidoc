@@ -1,4 +1,6 @@
 :imagesdir: ../images
+:experimental:
+
 == Description
 
 [role="col-md-12 text-justify"]
@@ -169,9 +171,7 @@ Si votre plugin n'a aucune spécification sur son installation, ajouter juste un
 :linkattrs:
 
 http://doc.jeedom.fr/fr_FR/core.html#plugin[*Installation d'un plugin*]
-
-|kbd:[Ctrl+T]
-|Open a new tab
+ kbd:[Ctrl+mouse clic] (pour ouvrir dans un nouvel onglet)
 
 === configuration.asciidoc
 
