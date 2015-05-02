@@ -7,12 +7,14 @@
 {nbsp} +
 
 === Description
-include::dev.exemple_doc.description.asciidoc[]
+include::doc.exemple_doc.description.asciidoc[]
 
 '''
 
 === Installation
 include::doc.exemple_doc.installation.asciidoc[]
+
+'''
 
 // === Configuration
 // include::dev.greenmomit.configuration.asciidoc[]
