@@ -198,7 +198,7 @@ Le plugin est installé, il faut maintenant l'activer (par défaut, les plugin i
 
 Cliquer sur "activer"
 
-image:dev.plugin-simple_installation5.png[]
+image:dev.plugin-simple_installation5.png[width=400,role="img-thumbnail"]
 
 Le plugin est désormais activé et prêt à être utilisé.
 
