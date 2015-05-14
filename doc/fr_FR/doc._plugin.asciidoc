@@ -167,10 +167,32 @@ Lister et décrire les présrequis à l'installation et l'utilisation du plugin
 
 === installation.asciidoc
 
-Si votre plugin n'a aucune spécification sur son installation, ajouter juste un pointeur vers la procédure d'installation d'un plugin décrit dans la documentation du core Jeedom :
+Si votre plugin n'a aucune spécification sur son installation, ajouter le contenu suivant :
 
-http://doc.jeedom.fr/fr_FR/core.html#plugin[*Installation d'un plugin*]
- kbd:[Ctrl+mouse clic] (pour ouvrir dans un nouvel onglet)
+Pour installer le plugin, aller dans "Général" => "Plugin"
+
+image:dev.plugin-simple_installation1.png[]
+
+Cliquer sur "Accéder au market"
+
+image:dev.plugin-simple_installation2.png[]
+
+Spécifier le nom du votre plugin à rechercher dans le market.
+Par exemple pour le plugin "Agenda"
+
+image:dev.plugin-simple_installation3.png[]
+
+Cliquer sur l'icone du plugin "Nom de votre plugin"
+
+Installer le plugin en choisissant "Installation stable" ou "Installation beta" :
+
+image:dev.plugin-simple_installation4.png[]
+
+[panel,warning]
+.Stable / Beta
+--
+Le choix d'un plugin en version beta, permet d'avoir les dernières évolutions, mais peut introduire des bugs pendant la phase de développement.
+--
 
 === configuration.asciidoc
 
