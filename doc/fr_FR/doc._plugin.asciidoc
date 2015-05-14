@@ -210,8 +210,42 @@ image:dev.plugin-simple_installation6.png[]
 Si votre plugin nécessite une installation spécifique, compléter ce chapitre pour prendre en compte la suite de l'installation nécessaire au bon fonctionnement du plugin
 --
 
-
 === configuration.asciidoc
+
+Le fichier *configuration.asciidoc* vous permet d'expliquer la configuration de votre plugin.
+
+Au minimum, vous devez présenter la configuration de
+
+* du plugin
+* du/des widgets
+
+==== configuration du plugin
+
+Pour configurer le plugin "nom du plugin" :
+
+Par exemple pour le plugin "Green Momit", aller sur "Plugins" => "Bien-être" => "Nom du plugin"
+
+image:dev.plugin-simple_configuration01.png[]
+
+Dans la page du plugin, ajouter un équipement :
+
+image:dev.plugin-simple_configuration02.png[]
+
+Spécifier le nom pour votre équipement :
+
+image:dev.plugin-simple_configuration03.png[]
+
+Spécifier toutes les options de configuration de l'équipement agémenté d'exemple.
+
+image:dev.plugin-simple_configuration04.png[]
+
+[panel,info]
+.Soyer précis et complet
+--
+Il est important de se mettre à la place des futurs utilisateurs de votre plugin.
+Plus votre documentation sera complète, moins d'interrogations apparaitrons sur le forum
+--
+
 
 == Règles
 
