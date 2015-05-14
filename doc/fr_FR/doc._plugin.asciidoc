@@ -194,6 +194,23 @@ image:dev.plugin-simple_installation4.png[]
 Le choix d'un plugin en version beta, permet d'avoir les dernières évolutions, mais peut introduire des bugs pendant la phase de développement.
 --
 
+Le plugin est installé, il faut maintenant l'activer (par défaut, les plugin installés sont désactiver).
+
+Cliquer sur "activer"
+
+image:dev.plugin-simple_installation5.png[]
+
+Le plugin est désormais activé et prêt à être utilisé.
+
+image:dev.plugin-simple_installation6.png[]
+
+[panel,info]
+.Plugin avec installation spécifique
+--
+Si votre plugin nécessite une installation spécifique, compléter ce chapitre pour prendre en compte la suite de l'installation nécessaire au bon fonctionnement du plugin
+--
+
+
 === configuration.asciidoc
 
 == Règles
