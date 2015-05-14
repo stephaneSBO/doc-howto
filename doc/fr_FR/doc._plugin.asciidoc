@@ -246,6 +246,15 @@ Il est important de se mettre à la place des futurs utilisateurs de votre plugi
 Plus votre documentation sera complète, moins d'interrogations apparaitrons sur le forum
 --
 
+==== configuration du widget
+
+Comme pour la configuration présenter les options de configuration et leurs impacts sur le widget de votre plugin.
+
+Mettre une ou plusieurs copies écran pour présenter le rendu final :
+
+image:dev.plugin-simple_configuration05.png[]
+
+En fonction du niveau d'interactivité de votre plugin, décriver les actions possible au niveau du widjet.
 
 == Règles
 
