@@ -77,3 +77,7 @@ Et on rentre "%HTTPD" dans le champ texte
 image::../images/android.autovoice12.png[]
 
 C'est fini. Sur reconnaissance de texte par Autovoice, Jeedom sera appelé et vous aurez la réponse configurée dans les interactions qui sera énoncée par votre téléphone. N'oubliez pas de configurer les interactions Jeedom et vous pourrez lui demander tout ce que vous voulez. De "quelle est la température du salon" à "allumes la lumière du salon"
+
+[icon="../images/plugin/tip.png"]
+[TIP]
+Si cela ne marche pas dès le debut c'est souvent tu as autovoice qui n'est pas actif pour cela lancé le aller, cliquez sur Google Now Integration et sur le premier choix tout en haut et autorisez autovoice
