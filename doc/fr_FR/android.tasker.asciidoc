@@ -1,0 +1,15 @@
+Cet article à pour but de vous guider pour utiliser Android pour parler à Jeedom. On utilisera le moteur des interactions Jeedom qui permet de formuler des demandes et d'avoir Jeedom qui y réponde (et active aussi si on le souhaite différents scénarios ou éléments)
+
+== Installation
+
+=== Les prérequis
+
+Un support Android (tablette, téléphone, PC avec microphone et hauts parleurs) Tasker d'installer sur l'Android Autovoice d'installer également
+
+Une note, Autovoice est la partie qui va vous permettre de parler à Jeedom mais pas que Jeedom réponde. Pour que Jeedom réponde, pas besoin de plugin tasker. On peut donc utiliser cet exemple en remplacant la reconnaissance autovoice par un tag NFC, une géolocalisation, un SMS recu ...
+
+=== Le principe
+
+On va utiliser un profil Tasker sur état. Celui-ci sera une reconaissance vocale de Autovoice. Ensuite en tâche on demandera à Tasker d'éxécuter 2 actions. La première sera d'appeler Jeedom et lui transmettre le résultat texte de la reconnaissance vocale. La deuxième sera d'énoncer le retour de Jeedom
+
+== Le profil Tasker
