@@ -14,22 +14,36 @@ Une note, Autovoice est la partie qui va vous permettre de parler à Jeedom mais
 
 On va utiliser un profil Tasker sur état. Celui-ci sera une reconaissance vocale de Autovoice. Ensuite en tâche on demandera à Tasker d'éxécuter 2 actions. La première sera d'appeler Jeedom et lui transmettre le résultat texte de la reconnaissance vocale. La deuxième sera d'énoncer le retour de Jeedom
 
-== Le profil Tasker
-
-=== Création du profil
+== Création du profil
 
 On ajoute un nouveau profil avec en déclencheur un état
 
-image:android.autovoice1.png[]
+image::../images/android.autovoice1.png[]
 
 On sélectionne "Plugins" sur le premier écran
 
-image:android.autovoice2.png[]
+image::../images/android.autovoice2.png[]
 
 En type de plugin, on sélectionne Autovoice
 
-image:android.autovoice3.png[]
+image::../images/android.autovoice3.png[]
 
 Dans le sous-menu Autovoice, on sélectionne Recognized
 
-image:android.autovoice4.png[]
+image::../images/android.autovoice4.png[]
+
+Vous pouvez sauvegarder la configuration par défaut, à moins de vouloir préciser des mots clefs ou autres paramètres
+
+image::../images/android.autovoice5.png[]
+
+On pourra donner au profil un nom comme "Jeedom Interactions" et la sauvegarde sera faite après la liaison avec une tâche
+
+== La tâche
+
+On ajoute une nouvelle tâche au profil nouvellement créer. Par exemple elle pourra être appelée "API Jeedom"
+
+image::../images/android.autovoice6.png[]
+
+La tâche regroupera à la fin 2 actions : appel API et dire le retour
+
+image::../images/android.autovoice7.png[]
