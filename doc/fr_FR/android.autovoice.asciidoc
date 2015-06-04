@@ -16,6 +16,20 @@ On va utiliser un profil Tasker sur état. Celui-ci sera une reconaissance vocal
 
 == Le profil Tasker
 
+=== Création du profil
+
 On ajoute un nouveau profil avec en déclencheur un état
 
-image:android.autovoice.png[]
+image:android.autovoice1.png[]
+
+On sélectionne "Plugins" sur le premier écran
+
+image:android.autovoice2.png[]
+
+En type de plugin, on sélectionne Autovoice
+
+image:android.autovoice3.png[]
+
+Dans le sous-menu Autovoice, on sélectionne Recognized
+
+image:android.autovoice4.png[]
