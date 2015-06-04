@@ -81,3 +81,7 @@ C'est fini. Sur reconnaissance de texte par Autovoice, Jeedom sera appelé et vo
 [icon="../images/plugin/tip.png"]
 [TIP]
 Si cela ne marche pas dès le debut c'est souvent tu as autovoice qui n'est pas actif pour cela lancé le aller, cliquez sur Google Now Integration et sur le premier choix tout en haut et autorisez autovoice
+
+[icon="../images/plugin/tip.png"]
+[TIP]
+Par defaut autovoice desactive la recherche google now, il est possible d'annuler ce comportement, pour cela dans tasker cliquez sur votre profil puis edition (petit crayon), puis advanced (tout en bas), et decochez "Do Google Now Search" (tout en bas)
