@@ -47,3 +47,33 @@ image::../images/android.autovoice6.png[]
 La tâche regroupera à la fin 2 actions : appel API et dire le retour
 
 image::../images/android.autovoice7.png[]
+
+D'abord on va ajouter une action de type "Réseau"
+
+image::../images/android.autovoice8.png[]
+
+Puis on sélectionne "Get HTTP"
+
+image::../images/android.autovoice8.png[]
+
+Là on va remplir avec les informations Jeedom.
+
+image::../images/android.autovoice9.png[]
+
+Voici les informations à entrer : 
+* Serveur:Port : https://mondomain.tld 
+* Chemin : /jeedom/core/api/jeeApi.php?apikey=votreclef&type=interact&query=%avcommnofilter&utf8=1
+
+Ne pas oublier de mettre votre clef API en lieu et place de la chaine votreclef. Il faut bien laisser %avcommnofilter à la fin, ca sera remplacé par la retour d'Autovoice
+
+image::../images/android.autovoice10.png[]
+
+Ajouter une action de type "Dire". Pour cela filtrer les actions en mettant "dire" au niveau de la loupe.
+
+image::../images/android.autovoice11.png[]
+
+Et on rentre "%HTTPD" dans le champ texte
+
+image::../images/android.autovoice12.png[]
+
+C'est fini. Sur reconnaissance de texte par Autovoice, Jeedom sera appelé et vous aurez la réponse configurée dans les interactions qui sera énoncée par votre téléphone. N'oubliez pas de configurer les interactions Jeedom et vous pourrez lui demander tout ce que vous voulez. De "quelle est la température du salon" à "allumes la lumière du salon"
