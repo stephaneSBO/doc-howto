@@ -1,3 +1,4 @@
+:icons:
 == Objectif
 
 Cet article a pour objet de vous guider dans l'utilisation d'Android pour parler à Jeedom. On utilisera le moteur des interactions Jeedom qui permet de formuler des demandes et d'avoir Jeedom qui y réponde (et aussi, si on le souhaite, active différents scénarios ou éléments).
