@@ -1,3 +1,3 @@
 Si votre plugin n'a aucune spécification sur son installation, ajouter juste un pointeur vers la procédure d'installation d'un plugin décrit dans la documentation du core Jeedom :
 
-http://doc.jeedom.fr/fr_FR/core.html#plugin
+https://www.jeedom.fr/doc/documentation/core/fr_FR/doc-core-plugin.html

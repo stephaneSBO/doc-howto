@@ -47,8 +47,8 @@ Dans le mail que vous avez reçu, figure aussi le numéro du service pack associ
 image::../images/mini.demarrage09.png[]
 
 Vous pouvez maintenant suivre la documentation : 
-http://doc.jeedom.fr/fr_FR/doc-premiers-pas.html[Premiers pas avec Jeedom] Qui vous permettra de trouver l'adresse IP de votre Jeedom Mini+ et de vous y connecter afin de commencer à la paramètrer et à l'utiliser.
+https://www.jeedom.fr/doc/documentation/premiers-pas/fr_FR/doc-premiers-pas.html[Premiers pas avec Jeedom] Qui vous permettra de trouver l'adresse IP de votre Jeedom Mini+ et de vous y connecter afin de commencer à la paramètrer et à l'utiliser.
 
-Pour approfondir la découverte et l'utilisation de Jeedom, vous disposez d'une documentation complète : http://doc.jeedom.fr/[Documentation Jeedom] et également d'une section répertoriant les tutoriels vidéo : https://jeedom.fr/video.php[Tutos vidéos]. N'hésitez pas à vous rendre sur le Forum de Jeedom pour toute autre question : https://forum.jeedom.fr/[Forum Jeedom].
+Pour approfondir la découverte et l'utilisation de Jeedom, vous disposez d'une documentation complète : https://jeedom.fr/doc[Documentation Jeedom] et également d'une section répertoriant les tutoriels vidéo : https://jeedom.fr/video.php[Tutos vidéos]. N'hésitez pas à vous rendre sur le Forum de Jeedom pour toute autre question : https://forum.jeedom.fr/[Forum Jeedom].
 
 Merci, et bonne découverte de la domotique avec Jeedom.
