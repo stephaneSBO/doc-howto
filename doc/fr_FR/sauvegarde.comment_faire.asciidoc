@@ -113,7 +113,7 @@ Ensuite, il faut sortir la carte microSD de la mini+ et la connecter à votre or
 
 image::../images/save-restore08.jpg[align="center"]
 
-=== [underline]#II) Sous Windows#
+=== Sous Windows
 
 Il faudra commencer par télécharger un logiciel tiers par exemple : http://sourceforge.net/projects/win32diskimager/[Win32 Disk Imager]
 
@@ -137,7 +137,7 @@ Enfin cliquer sur le bouton _Write_, afin de restaurer cette image sur la carte 
 
 image::../images/save-restore10.jpg[align="center"]
 
-=== [underline]#III) Sous MacOSX#
+=== Sous MacOSX
 
 Pour vous faciliter la tâche, vous pouvez télécharger le logiciel http://www.tweaking4all.com/hardware/raspberry-pi/macosx-apple-pi-baker/[ApplePi-Baker]
 
