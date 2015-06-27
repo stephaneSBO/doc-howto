@@ -24,7 +24,7 @@ fournie par l'équipe voir https://www.jeedom.fr/doc/documentation/installation/
 
 Afin de gérer et paramétrer les sauvegardes, il faut se rendre dans le menu _Général > Administration > Sauvegardes_.
 
-=== [underline]#I) Configurations#
+=== Configurations
 
 . [underline]#Paramètres Généraux#
 
@@ -68,7 +68,7 @@ Afin de pouvoir utiliser la sauvegarde sur le cloud vous devez acheter un abonne
 
 image::../images/save-restore05.jpg[align="center"]
 
-=== [underline]#II) Sauvegarde#
+=== Sauvegarde
 
 On a vu que l'on peut configurer Jeedom afin qu'il se sauvegarde automatiquement à intervalle régulier 
 mais aussi avant de lancer des mises à jour. Afin de lancer une sauvegarde manuellement se rendre dans 
@@ -81,7 +81,7 @@ Si vous avez acheté un abonnement sauvegarde cloud, le fichier sera automatique
 envoyé sur les serveurs cloud de Jeedom. Vous pouvez aussi utiliser le plugin Data Transfert afin 
 de copier ces fichiers sur un serveur FTP, SFTP, Dropbox...
 
-=== [underline]#III) Restauration#
+=== Restauration
 
 La restauration est aussi simple que la sauvegarde.
 
@@ -97,7 +97,7 @@ ordinateur vers Jeedom en utilisant la fonction _Envoyer une sauvegarde_ de la s
 
 == Sauvegarde/Restauration de la carte microSD
 
-=== [underline]#I) Préparatifs#
+=== Préparatifs
 
 Ces sauvegardes/restaurations se réalisent à partir d'un autre ordinateur afin de faire une "image propre" de la carte SD. 
 Il faut dans un premier temps arrêter la mini+. Pour cela, passer Jeedom en mode expert dans le menu utilisateur 
@@ -127,7 +127,7 @@ Enfin cliquer sur le bouton _Read_, afin de créer l'image.
 
 image::../images/save-restore09.jpg[align="center"]
 
-. [underline]#Restauration#
+. Restauration
 
 Lancer le logiciel et vérifier que la lettre en dessous de _Device_ corresponde bien à celle de votre carte/lecteur de carte.
 
@@ -165,7 +165,7 @@ restaurer l'image sur la carte microSD.
 
 _Rmq : Dans cet exemple, le nom du disque de la carte est /dev/disk1, il faut donc saisir dans la commande de sauvegarde /dev/+++<u>r</u>+++disk1_
 
-=== [underline]#IV) Sous Linux#
+=== Sous Linux
 
 . [underline]#Sauvegarde#   
 * Afin de trouver le disque correspondant à la carte, ouvrir un terminal et saisir la commande : _sudo fdisk -l | grep Dis_
