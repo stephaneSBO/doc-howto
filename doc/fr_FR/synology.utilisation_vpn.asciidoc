@@ -53,7 +53,7 @@ Il est conseillé de vous créer un utilisateur uniquement pour le VPN et sans a
 
 image::../images/synology.utilisation_vpn5.png[]
 
-== Rediriger les port de votre BOX (exemple avec freebox)
+== Rediriger les port de votre BOX
 
 Dans le navigateur entrer 192.168.1.1. Cliquez sur parametre de la freebox
 
@@ -86,7 +86,7 @@ image::../images/synology.utilisation_vpn11.png[]
 
 Recommencer l’opération avec les ports UDP 500 et 4500
 
-== Configurer le VPN sur votre mobile (Exemple sur Android 5)
+== Configurer le VPN sur votre mobile
 
 Aller dans application et sélectionner Paramètres
 
