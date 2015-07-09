@@ -1,3 +1,5 @@
+:icons: font
+
 Tout d'abord merci pour l'achat de la Jeedom Mini+. Vous trouverez ici, la documentation détaillée expliquant comment mettre en service cette box, et ainsi découvrir la domotique avec Jeedom.
 
 Le carton de la Jeedom Mini+ que vous avez reçu doit contenir :

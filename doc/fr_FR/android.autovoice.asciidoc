@@ -1,4 +1,7 @@
-:icons:
+:icons: font
+
+= Android autvoice
+
 == Objectif
 
 Cet article a pour objet de vous guider dans l'utilisation d'Android pour parler à Jeedom. On utilisera le moteur des interactions Jeedom qui permet de formuler des demandes et d'avoir Jeedom qui y réponde (et aussi, si on le souhaite, active différents scénarios ou éléments).
@@ -80,11 +83,9 @@ image::../images/android.autovoice12.png[]
 
 C'est fini. Sur reconnaissance de texte par AutoVoice, Jeedom sera appelé et vous aurez la réponse configurée dans les interactions qui sera énoncée par votre téléphone. N'oubliez pas de configurer les interactions Jeedom et vous pourrez lui demander tout ce que vous voulez. De "quelle est la température du salon" à "allumes la lumière du salon".
 
-[icon="../images/plugin/tip.png"]
 [TIP]
 Si cela ne marche pas dès le debut, c'est souvent parce que AutoVoice n'est pas actif.
 Pour cela lancez le, cliquez sur Google Now Integration et sur le premier choix tout en haut et autorisez AutoVoice.
 
-[icon="../images/plugin/tip.png"]
 [TIP]
 Par defaut, AutoVoice désactive la recherche Google Now, il est possible d'annuler ce comportement, pour cela dans Tasker cliquez sur votre profil puis "edition" (petit crayon), puis "advanced" (tout en bas), et decochez "Do Google Now Search" (tout en bas).

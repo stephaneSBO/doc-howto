@@ -1,16 +1,16 @@
-:icons:
+:icons: font
+
+= Clef Wifi sur mini
+
 == Objectif
 
 Voici, au cas où, une procédure de bout en bout pour installer une clé WiFi de type "Edimax ew-7811n" sur une Jeedom Mini, et en considérant une authentification wifi de type "WPA 2 + AES". 
 
 Attention, cette procédure ne marche telle quelle uniquement dans le strict cadre de l'environnement indiqué précédemment (même modèle, même box Jeedom, même authentification WiFi) . Ca peut également bien entendu marcher pour d'autres composants (ou pas) mais sans aucune garantie. 
 
-
-[icon="../images/plugin/important.png"]
 [IMPORTANT]
 Attention cette procedure n'est surtout pas a faire sur mini+ sous peine ne perdre l'accès à celle-ci et de devoir tout reinstaller.
 
-[icon="../images/plugin/important.png"]
 [IMPORTANT]
 Cette doc est à appliquer à vos risques et périls en cas de soucis l'équipe Jeedom ne pourra en aucun cas être tenue responsable.
 
