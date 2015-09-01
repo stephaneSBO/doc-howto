@@ -379,39 +379,39 @@ http://ojn.raspberry.pi/ojn_admin/index.php
 
 Vous devez avoir : 
 
-image::../images/installation.openjabnab.png[]
+image::../images/installation.openjabnab.PNG[]
 
 Il faut vous maintenant vous creer un compte en cliquant sur creer un utilisateur : 
 
-image::../images/installation.openjabnab2.png[]
+image::../images/installation.openjabnab2.PNG[]
 
 Renseignez les informations demandée et connectez vous : 
 
-image::../images/installation.openjabnab3.png[]
+image::../images/installation.openjabnab3.PNG[]
 
 Une fois connecté allez sur server  : 
 
-image::../images/installation.openjabnab4.png[]
+image::../images/installation.openjabnab4.PNG[]
 
 Puis descendez pour trouver la liste des lapins connecté et récuperer son adresse mac : 
 
-image::../images/installation.openjabnab5.png[]
+image::../images/installation.openjabnab5.PNG[]
 
 Allez ensuite sur compte et renseignez le champs nom et adresse mac du lapin puis validez : 
 
-image::../images/installation.openjabnab6.png[]
+image::../images/installation.openjabnab6.PNG[]
 
 Vous retrouvez maintenant sur la page lapin votre lapin, cliquez dessus pour ouvrir sa configuration : 
 
-image::../images/installation.openjabnab7.png[]
+image::../images/installation.openjabnab7.PNG[]
 
 Il faut vous maintenant activer l'api violet et la passer en public, c'est aussi ici que vous retrouvez la clef api violet qui vous servira pour Jeedom : 
 
-image::../images/installation.openjabnab8.png[]
+image::../images/installation.openjabnab8.PNG[]
 
 En dessous vous retrouvez la liste des plugins, n'oubliez de les activer (type TTS ou controle des oreilles) : 
 
-image::../images/installation.openjabnab9.png[]
+image::../images/installation.openjabnab9.PNG[]
 
 == Configuration de Jeedom
 
@@ -429,6 +429,6 @@ Et ajouter la ligne suivante :
 
 Ensuite tous se passe dans Jeedom, après avoir creer votre lapin voila la configuration à mettre: 
 
-image::../images/installation.openjabnab10.png[]
+image::../images/installation.openjabnab10.PNG[]
 
 Voila votre lapin a maintenant son propre terrier en local !!!!!
