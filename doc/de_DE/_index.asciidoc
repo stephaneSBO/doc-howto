@@ -1,5 +1,5 @@
-== How to ... ? (Comment faire pour ... ?)
+== How to ... ? (Wie kann ich ...?)
 
-[[Mettre en marche ma Mini+]]
-=== Déballage et installation de la Mini+
+[[Einschalten des Mini+]]
+=== Auspacken und Installation des Mini+
 include::mini.demarrage.asciidoc[]
