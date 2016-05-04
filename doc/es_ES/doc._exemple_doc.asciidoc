@@ -1,0 +1,24 @@
+:imagesdir: ../images
+:icons:
+
+== Exemple Doc
+
+
+{nbsp} +
+
+=== Description
+include::doc.exemple_doc.description.asciidoc[]
+
+'''
+
+=== Installation
+include::doc.exemple_doc.installation.asciidoc[]
+
+'''
+
+// === Configuration
+// include::dev.greenmomit.configuration.asciidoc[]
+
+// '''
+// === FAQ
+// include::dev.greenmomit.faq.asciidoc[]

@@ -1,0 +1,69 @@
+= Passer de nginx à apache
+
+[IMPORTANT]
+Cette manipulation ne marche que si vous êtes en Jeedom 2.0, la faire en 1.xxx aurait pour consequence de completement casser Jeedom
+
+[NOTE]
+Toutes les manipulations doivent etre faite en root
+
+== Pourquoi ?
+
+Apache, grace au htaccess permet une grand flexibilité pour jeedom en permettant de configurer automatiquement lors des mises à jour certains paramètres sans pour autant avoir à éditer des fichiers de configuration directement.
+
+Cependant nginx est réputé plus rapide qu'apache, nous sommes en train de verifier ce point sur jeedom
+
+== Arreter nginx
+
+----
+systemctl stop nginx
+systemctl stop php5-fpm
+----
+
+== Installer apache
+
+----
+apt-get install -y apache2 php5 libapache2-mod-php5
+----
+
+== Configuration apache
+
+----
+mkdir -p /var/www/html/log
+wget https://raw.githubusercontent.com/jeedom/core/beta/install/apache_security -O /etc/apache2/conf-available/security.conf
+rm /var/www/html/index.html
+----
+
+== Transfert des fichiers Jeedom
+
+----
+cp -R /usr/share/nginx/www/jeedom/* /var/www/html/
+chmod -R 775 -R /var/www/html/*
+chown -R www-data:www-data /var/www/html/*
+----
+
+== Mettre à jour la crontab
+
+Il faut mettre à jour le chemin d'accès à jeedom, remplacer : 
+
+----
+* * * * * su --shell=/bin/bash - www-data -c '/usr/bin/php /usr/share/nginx/www/jeedom/core/php/jeeCron.php' >> /dev/null 2>&1
+----
+
+Par : 
+
+----
+* * * * * su --shell=/bin/bash - www-data -c '/usr/bin/php var/www/html/core/php/jeeCron.php' >> /dev/null 2>&1
+----
+
+== Test et désactivation de nginx
+
+A partir de la vous devriez pouvoir acceder à jeedom comme avant. Si c'est le cas il faut maintenant activer automatiquement apache et supprimer nginx : 
+
+----
+systemctl disable nginx
+systemctl disable php5-fpm
+systemctl enable apache2
+apt-get remove nginx*
+apt-get autoremove
+rm -rf /usr/share/nginx/jeedom
+----

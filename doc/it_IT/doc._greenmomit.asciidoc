@@ -1,0 +1,18 @@
+:imagesdir: ../images
+:icons:
+
+== Greenmomit
+image:greenmomit_icon.png[]
+
+{nbsp} +
+
+=== Description
+include::dev.greenmomit.description.asciidoc[]
+
+'''
+=== Configuration
+include::dev.greenmomit.configuration.asciidoc[]
+
+'''
+=== FAQ
+include::dev.greenmomit.faq.asciidoc[]

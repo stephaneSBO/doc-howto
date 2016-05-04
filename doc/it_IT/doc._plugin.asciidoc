@@ -1,0 +1,263 @@
+:imagesdir: ../images
+:experimental:
+:linkattrs:
+
+== Description
+
+[role="col-md-12 text-justify"]
+
+image:dev.plugin-simple.01.jpg[width=400,role="img-thumbnail"]
+
+--
+Cette documentation vous permettra d'appréhender le système de documentation intégré dans jeedom : AsciiDoc
+
+Objectifs :
+
+* présenter le fonctionnement de l'AsciiDoc
+* présenter la structure des différents documents nécessaires
+* fournir un minimum de règles pour harmoniser l'ensemble des documents Jeedom
+
+--
+
+== Fonctionnement de l'AsciiDoc
+
+A documenter
+
+=== Généralité
+
+Asciidoc est un langage de balisage léger. C'est aussi le nom de la suite logicielle qui permet de transformer les fichiers "texte source" en documents publiables.
+
+* Le programme de conversion asciidoc permet de transformer le document source au format XHTML, DocBook ou HTML.
+* Le programme a2x permet d'obtenir d'autres formats tels que PDF, TeX, Unix manpages ou Epub.
+
+Site officiel : http://www.methods.co.nz/asciidoc/
+
+=== AsciiDoc & Jeedom
+
+La documentation Jeedom s'appuie sur l'AsciiDoc et sur l'adjonction du bootstap de Laurent Laville : http://laurent-laville.org/asciidoc/bootstrap/
+
+Cette particularité permet d'ajouter des fonctions supplémentaires au fonctions présentes dans l'AsciiDoc. Mais nécessite aussi une compilation particulière pour avoir une visibilité sur le rendu final. {nbsp} +
+Nous détaillerons dans ce document, comment générer vos pages en local pour valider la mise en forme.
+
+=== Un peu de syntaxe
+
+Ce lien est un pense bête des syntaxes asciidoc : http://powerman.name/doc/asciidoc
+
+
+== Structure des fichiers AsciiDoc
+
+Plusieurs fichiers asciidoc (extension de vos fichiers) permettent de structurer votre documentation.
+
+Vous devez au minimum avoir les fichiers asciidoc suivants :
+
+* index.asciidoc
+* description.asciidoc
+* installation.asciidoc
+* configuration.asciidoc
+
+=== index.asciidoc
+
+Le fichier index.asciidoc est, comme son nom l'indique, la racine de votre documentation.
+
+Ce fichier ne doit contenir que des pointeurs sur l'ensemble des autres fichiers et non directement du contenu.
+
+Exemple de fichier *index.asciidoc* :
+
+----
+:imagesdir: ../images
+:icons:
+
+== Greenmomit
+image:greenmomit_icon.png[]
+
+{nbsp} +
+
+=== Description
+include::description.asciidoc[]
+
+'''
+=== Configuration
+include::configuration.asciidoc[]
+
+'''
+=== FAQ
+include::faq.asciidoc[]
+----
+
+Les fichiers asciidoc inclus sont
+
+* description.asciidoc
+* installation.asciidoc
+* configuration.asciidoc
+* faq.asciidoc
+
+Ces fichiers correspondent à la base de la structure de la documentation Jeedom.
+Il est possible d'inclure d'autres fichier AsciiDoc.
+
+=== description.asciidoc
+
+Le fichier *description.asciidoc* vous permet de présenter votre votre plugin.
+
+==== Plugin simple
+
+Si votre plugin est relativement simple, n'a pas de dépendance avec un équipement particulier à présenter, vous pouvez vous limiter à une description de l'objectif du plugin.
+
+Exemple de fichier *description.asciidoc* simple :
+
+----
+:imagesdir: ../images
+:icons:
+
+==== Générale
+
+Ce Plugin à pour objectif de BLABLABLA.
+
+Une petite copie d'écran du rendu du widget du plugin :
+
+image:nomduplugin_widget.png[]
+
+----
+
+==== Plugin complexe
+
+Si votre plugin est :
+
+* dépendant d'un équipement tier
+* nécessite quelques présrequis
+* nécessite une explication sur le principe de fonctionnement.
+
+Il est conseillé de créer plusieurs sous-chapitre.
+
+* *Desciption générale* +
+* *Description marketing :)*
+* *Les présrequis*
+* *Principe de fonctionnement*
+
+Exemple de fichier *description.asciidoc* complexe :
+
+----
+:imagesdir: ../images
+:icons:
+
+==== Générale
+
+Ce Plugin à pour objectif de BLABLABLA.
+
+Une petite copie d'écran du rendu du widget du plugin :
+
+image:nomduplugin_widget.png[]
+
+// Si le plugin est dépendant d'un équipement ou solution logiciel tier, le présenter
+==== Présentation de l'équipement ou application XXX
+//ajouter une image de l'équipement
+image:nomduplugin_equipementXXX.png[]
+
+Décrire l'équipement, ajouter des liens vers le consructeur ou sites de référence.
+Décrire le niveau d'intégration de l'équipement dans Jeedom (complète, incomplète et quelles fonctionnalités n'est pas implémentées)
+
+// Si il est nécessaire de présenter le principe de fonctionnement :
+==== Principe de fonctionnement
+Décrire l'architecture et la philosophie du plugin.
+
+==== Présrequis
+Lister et décrire les présrequis à l'installation et l'utilisation du plugin
+* ex : une clé API à demander
+
+----
+
+=== installation.asciidoc
+
+Si votre plugin n'a aucune spécification sur son installation, ajouter le contenu suivant :
+
+Pour installer le plugin, aller dans "Général" => "Plugin"
+
+image:dev.plugin-simple_installation1.png[]
+
+Cliquer sur "Accéder au market"
+
+image:dev.plugin-simple_installation2.png[]
+
+Spécifier le nom du votre plugin à rechercher dans le market.
+Par exemple pour le plugin "Agenda"
+
+image:dev.plugin-simple_installation3.png[]
+
+Cliquer sur l'icone du plugin "Nom de votre plugin"
+
+Installer le plugin en choisissant "Installation stable" ou "Installation beta" :
+
+image:dev.plugin-simple_installation4.png[]
+
+[panel,warning]
+.Stable / Beta
+--
+Le choix d'un plugin en version beta, permet d'avoir les dernières évolutions, mais peut introduire des bugs pendant la phase de développement.
+--
+
+Le plugin est installé, il faut maintenant l'activer (par défaut, les plugin installés sont désactiver).
+
+Cliquer sur "activer"
+
+image:dev.plugin-simple_installation5.png[width=800,role="img-thumbnail"]
+
+Le plugin est désormais activé et prêt à être utilisé.
+
+image:dev.plugin-simple_installation6.png[]
+
+[panel,info]
+.Plugin avec installation spécifique
+--
+Si votre plugin nécessite une installation spécifique, compléter ce chapitre pour prendre en compte la suite de l'installation nécessaire au bon fonctionnement du plugin
+--
+
+=== configuration.asciidoc
+
+Le fichier *configuration.asciidoc* vous permet d'expliquer la configuration de votre plugin.
+
+Au minimum, vous devez présenter la configuration de
+
+* du plugin
+* du/des widgets
+
+==== configuration du plugin
+
+Pour configurer le plugin "nom du plugin" :
+
+Par exemple pour le plugin "Green Momit", aller sur "Plugins" => "Bien-être" => "Nom du plugin"
+
+image:dev.plugin-simple_configuration01.png[]
+
+Dans la page du plugin, ajouter un équipement :
+
+image:dev.plugin-simple_configuration02.png[]
+
+Spécifier le nom pour votre équipement :
+
+image:dev.plugin-simple_configuration03.png[]
+
+Spécifier toutes les options de configuration de l'équipement agémenté d'exemple.
+
+image:dev.plugin-simple_configuration04.png[]
+
+[panel,info]
+.Soyer précis et complet
+--
+Il est important de se mettre à la place des futurs utilisateurs de votre plugin.
+Plus votre documentation sera complète, moins d'interrogations apparaitrons sur le forum
+--
+
+==== configuration du widget
+
+Comme pour la configuration présenter les options de configuration et leurs impacts sur le widget de votre plugin.
+
+Mettre une ou plusieurs copies écran pour présenter le rendu final :
+
+image:dev.plugin-simple_configuration05.png[]
+
+En fonction du niveau d'interactivité de votre plugin, décriver les actions possible au niveau du widjet.
+
+== Règles
+
+=== Les images
+
+A compléter
