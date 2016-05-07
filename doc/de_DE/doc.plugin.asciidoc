@@ -120,20 +120,20 @@ image:nomduplugin_widget.png[]
 
 ==== Komplexes Plugin
 
-Si votre plugin est :
+Wenn Ihr Plugin :
 
-* dépendant d'un équipement tier
-* nécessite quelques présrequis
-* nécessite une explication sur le principe de fonctionnement.
+* abhängig von Fremdherstellern
+* einige Grundvoraussetzung erfordert
+* eine Erklärung des Funktionsprinzips erfordert
 
-Il est conseillé de créer plusieurs sous-chapitre.
+Es ist ratsam, mehrere Unterkapitel zu erstellen.
 
-* *Desciption générale* +
-* *Description marketing :)*
-* *Les présrequis*
-* *Principe de fonctionnement*
+* *Allgemeine Beschreibung* +
+* *Marketing Beschreibung :)*
+* *Die Grundvoraussetzung*
+* *Funktionsprinzip*
 
-Exemple de fichier *description.asciidoc* complexe :
+beschreibung.asciidoc* komplexe Beispieldatei :
 
 ----
 :imagesdir: ../images
@@ -147,35 +147,35 @@ Ein kleiner Rendering-Screenshot vom Plugin-Widget :
 
 image:nomduplugin_widget.png[]
 
-// Si le plugin est dépendant d'un équipement ou solution logiciel tier, le présenter
-==== Présentation de l'équipement ou application XXX
-//ajouter une image de l'équipement
+// Wenn das Plugin abhängig von einer Ausstattung oder Software-Lösung Dritter ist, präsentieren
+==== Präsentation des Gerätes oder Anwendung XXX
+// Ein Geräte Bild hinzufügen
 image:nomduplugin_equipementXXX.png[]
 
-Décrire l'équipement, ajouter des liens vers le consructeur ou sites de référence.
-Décrire le niveau d'intégration de l'équipement dans Jeedom (complète, incomplète et quelles fonctionnalités n'est pas implémentées)
+Beschreiben Sie die Ausrüstung, fügen Sie Links zu den Websites der Hersteller oder Verweis hinzu.
+Beschreiben Sie den Grad der Integration der Geräte in Jeedom (komplett, unvollständig und welche Funktionalität nicht implementiert ist)
 
-// Si il est nécessaire de présenter le principe de fonctionnement :
-==== Principe de fonctionnement
-Décrire l'architecture et la philosophie du plugin.
+// Wenn es notwendig ist, das Funktionsprinzip erklären :
+==== Funktionsprinzip
+Beschreiben Sie die Architektur und die Philosophie des Plugins.
 
-==== Présrequis
-Lister et décrire les présrequis à l'installation et l'utilisation du plugin
-* ex : une clé API à demander
+==== Grundvoraussetzung
+Eine Auflistung und Beschreibung der Grundvoraussetzung zur Installation und Verwendung des Plugins.
+* z.B. : benötigt einen API-Schlüssel 
 
 ----
 
 === installation.asciidoc
 
-Si votre plugin n'a aucune spécification sur son installation, ajouter juste un pointeur vers la procédure d'installation d'un plugin décrit dans la documentation du core Jeedom :
+Wenn Ihr Plugin keine Vorgaben bei der Installation hat, fügen Sie nur einen Verweis auf die Prozedur zum Installieren eines Plugins, die in der Dokumentation des Jeedom Kerns beschrieben ist:
 
-https://www.jeedom.fr/doc/documentation/core/fr_FR/doc-core-plugin.html[*Installation d'un plugin*]
- kbd:[Ctrl+mouse clic] (pour ouvrir dans un nouvel onglet)
+https://www.jeedom.fr/doc/documentation/core/fr_FR/doc-core-plugin.html[*Das Installieren eines Plugins*]
+ kbd:[Ctrl+Maus klick] (in einem neuen Tab zu öffnen)
 
-=== configuration.asciidoc
+=== konfiguration.asciidoc
 
-== Règles
+== Regeln
 
-=== Les images
+=== Die Bilder
 
-A compléter
+Ergänzungen

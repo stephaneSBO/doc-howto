@@ -1,12 +1,12 @@
 :imagesdir: ../images
 :icons:
 
-== Exemple Doc
+== Beispiel Doc
 
 
 {nbsp} +
 
-=== Description
+=== Beschreibung
 include::doc.exemple_doc.description.asciidoc[]
 
 '''
@@ -16,7 +16,7 @@ include::doc.exemple_doc.installation.asciidoc[]
 
 '''
 
-// === Configuration
+// === Konfiguration
 // include::dev.greenmomit.configuration.asciidoc[]
 
 // '''

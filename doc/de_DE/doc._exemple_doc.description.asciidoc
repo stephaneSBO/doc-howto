@@ -1,26 +1,26 @@
 :imagesdir: ../images
 :icons:
 
-==== Générale
+==== Allgemein
 
-Ce Plugin à pour objectif de BLABLABLA.
+Dieses Plugin ist für BLABLABLA.
 
-Une petite copie d'écran du rendu du widget du plugin :
+Ein kleiner Rendering-Screenshot vom Plugin-Widget :
 
 image:nomduplugin_widget.png[]
 
-// Si le plugin est dépendant d'un équipement ou solution logiciel tier, le présenter
-==== Présentation de l'équipement ou application XXX
-//ajouter une image de l'équipement
+// Wenn das Plugin abhängig von einer Ausstattung oder Software-Lösung Dritter ist, präsentieren
+==== Präsentation des Gerätes oder Anwendung XXX
+// Ein Geräte Bild hinzufügen
 image:nomduplugin_equipementXXX.png[]
 
-Décrire l'équipement, ajouter des liens vers le consructeur ou sites de référence.
-Décrire le niveau d'intégration de l'équipement dans Jeedom (complète, incomplète et quelles fonctionnalités n'est pas implémentées)
+Beschreiben Sie die Ausrüstung, fügen Sie Links zu den Websites der Hersteller oder Verweis hinzu.
+Beschreiben Sie den Grad der Integration der Geräte in Jeedom (komplett, unvollständig und welche Funktionalität nicht implementiert ist)
 
-// Si il est nécessaire de présenter le principe de fonctionnement :
-==== Principe de fonctionnement
-Décrire l'architecture et la philosophie du plugin.
+// Wenn es notwendig ist, das Funktionsprinzip erklären :
+==== Funktionsprinzip
+Beschreiben Sie die Architektur und die Philosophie des Plugins.
 
-==== Présrequis
-Lister et décrire les présrequis à l'installation et l'utilisation du plugin
-* ex : une clé API à demander
+==== Grundvoraussetzung
+Eine Auflistung und Beschreibung der Grundvoraussetzung zur Installation und Verwendung des Plugins.
+* z.B. : benötigt einen API-Schlüssel 

@@ -1,29 +1,29 @@
 :imagesdir: ../images
 :icons:
 
-== Insertion d'une image
+== Bild einfügen
 
-Copier vos images dans le répertoire *doc/images* de votre plugin. +
-Vos fichiers images doivent être préfixés par `nom de votre plugin suivi de _`
+Kopieren Sie Ihre Bilder ins Verzeichnis *doc/Bilder* Ihres Plugins. +
+Ihren Bilddateien müssen `Ihr Plugin mit Namen_` vorangestellt werden
 
-Exemples :
+Beispiel :
 
 * virtuel_logo.png
 * greenmomit_config_01.png
 
-En haut de votre fichier scpécifier la variable :imagesdir:
+Im oberen Teil Ihrer Datei, ist die Variable zum spezifieren :imagesdir:
 
 ----
 :imagesdir: ../images
 ----
 
-Enfin insérer à l'endroit désiré votre image
+Schließlich wird in die gewünschte Stelle Ihr Bild einzufügen
 
 ----
 image:greenmomit_icon.png[]
 ----
 
-Insérer du bash / shell
+In bash / shell einfügen
 
 [source,shell]
 ----
@@ -32,7 +32,7 @@ Insérer du bash / shell
 * * * * * su --shell=/bin/bash - www-data -c 'nice -n 1
 ----
 
-Insérer du html
+In html einfügen
 [source,html]
 ----
 <input class="eqLogicAttr" hidden data-l1key="configuration" data-l2key="bsTextJSON"/>
@@ -46,38 +46,38 @@ function saveJsonTheme() {
 }
 ----
 
-== Bloc
+== Block
 
-=== Bloc succes
+=== Block-Erfolg
 
 [alert,success]
-.Well done!
+.Gut gemacht!
 --
-You successfully read this important alert message.
+Sie lesen erfolgreich diese wichtige Warnmeldung.
 --
 
-=== Bloc information
+=== Block-Information
 
 [alert,info]
-.Heads up!
+.Kopf oben!
 --
-This alert needs your attention, but it's not super important.
+Diese Warnung braucht Ihre Aufmerksamkeit, aber es ist nicht super wichtig.
 --
 
-=== Bloc Attention
+=== Block Achtung
 
 [alert,warning]
-.Warning!
+.Warnung!
 --
-Better check yourself, you're not looking too good.
+Besser selbst überprüfen, es sieht nicht gut aus.
 --
 
-=== Bloc Danger
+=== Block Gefahr
 
 [alert,danger]
 .Oh snap!
 --
-Change a few things up and try submitting again.
+Ändern Sie oben einige Sachen und versuchen Sie es wieder zu senden.
 --
 
 == Panel

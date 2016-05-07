@@ -152,112 +152,112 @@ image:nomduplugin_widget.png[]
 // Ein Geräte Bild hinzufügen
 image:nomduplugin_equipementXXX.png[]
 
-Décrire l'équipement, ajouter des liens vers le consructeur ou sites de référence.
-Décrire le niveau d'intégration de l'équipement dans Jeedom (complète, incomplète et quelles fonctionnalités n'est pas implémentées)
+Beschreiben Sie die Ausrüstung, fügen Sie Links zu den Websites der Hersteller oder Verweis hinzu.
+Beschreiben Sie den Grad der Integration der Geräte in Jeedom (komplett, unvollständig und welche Funktionalität nicht implementiert ist)
 
-// Si il est nécessaire de présenter le principe de fonctionnement :
-==== Principe de fonctionnement
-Décrire l'architecture et la philosophie du plugin.
+// Wenn es notwendig ist, das Funktionsprinzip erklären :
+==== Funktionsprinzip
+Beschreiben Sie die Architektur und die Philosophie des Plugins.
 
-==== Présrequis
-Lister et décrire les présrequis à l'installation et l'utilisation du plugin
-* ex : une clé API à demander
+==== Grundvoraussetzung
+Eine Auflistung und Beschreibung der Grundvoraussetzung zur Installation und Verwendung des Plugins.
+* z.B. : benötigt einen API-Schlüssel 
 
 ----
 
 === installation.asciidoc
 
-Si votre plugin n'a aucune spécification sur son installation, ajouter le contenu suivant :
+Wenn Ihr Plugin keine Vorgaben bei der Installation hat, fügen Sie den folgenden Inhalt hinzu :
 
-Pour installer le plugin, aller dans "Général" => "Plugin"
+Um das Plugin zu installieren, gehen Sie zu "Allgemein" => "Plugin"
 
 image:dev.plugin-simple_installation1.png[]
 
-Cliquer sur "Accéder au market"
+Klicken Sie auf "Zum Markt gehen"
 
 image:dev.plugin-simple_installation2.png[]
 
-Spécifier le nom du votre plugin à rechercher dans le market.
-Par exemple pour le plugin "Agenda"
+Geben Sie den Namen Ihres Plugins ein, für die Suche auf dem Markt.
+Z.B. für das Plugin "Kalender"
 
 image:dev.plugin-simple_installation3.png[]
 
-Cliquer sur l'icone du plugin "Nom de votre plugin"
+Klicken Sie auf das Symbol des Plugins "Ihr Plugin Name"
 
-Installer le plugin en choisissant "Installation stable" ou "Installation beta" :
+Installieren Sie das Plugin, indem Sie "Stabile Installation " oder "Beta Installation" auswählen :
 
 image:dev.plugin-simple_installation4.png[]
 
 [panel,warning]
-.Stable / Beta
+.Stabil / Beta
 --
-Le choix d'un plugin en version beta, permet d'avoir les dernières évolutions, mais peut introduire des bugs pendant la phase de développement.
+Die Wahl eines Beta-Plugins, ermöglicht es die neuesten Entwicklungen zu haben, aber Fehler während der Entwicklungsphase können vorkommen.
 --
 
-Le plugin est installé, il faut maintenant l'activer (par défaut, les plugin installés sont désactiver).
+Das Plugin ist installiert, Sie müssen es jetzt aktivieren (Standardmäßig ist das installierte Plugin deaktiviert).
 
-Cliquer sur "activer"
+Klicken Sie auf "aktivieren"
 
 image:dev.plugin-simple_installation5.png[width=800,role="img-thumbnail"]
 
-Le plugin est désormais activé et prêt à être utilisé.
+Das Plugin ist nun aktiviert und einsatzbereit.
 
 image:dev.plugin-simple_installation6.png[]
 
 [panel,info]
-.Plugin avec installation spécifique
+.Plugin mit spezifischer installation
 --
-Si votre plugin nécessite une installation spécifique, compléter ce chapitre pour prendre en compte la suite de l'installation nécessaire au bon fonctionnement du plugin
+Wenn Ihr Plugin eine spezifische Installation erfordert, dieses Kapitel ist zur vervollständigung, um den Zusammenhang der Installation zu berücksichtigen, die für das gute Funktionieren des plugin notwendig ist
 --
 
-=== configuration.asciidoc
+=== konfiguration.asciidoc
 
-Le fichier *configuration.asciidoc* vous permet d'expliquer la configuration de votre plugin.
+Die Datei *konfiguration.asciidoc* ermöglicht es Ihnen, die Konfiguration Ihres Plugin zu erklären.
 
-Au minimum, vous devez présenter la configuration de
+Sie müssen mindestens die Konfiguration vorstellen
 
-* du plugin
-* du/des widgets
+* das Plugin
+* das/die Widgets
 
-==== configuration du plugin
+==== Plugin-Konfiguration
 
-Pour configurer le plugin "nom du plugin" :
+So konfigurieren Sie das Plugin "Pluginname" :
 
-Par exemple pour le plugin "Green Momit", aller sur "Plugins" => "Bien-être" => "Nom du plugin"
+Zum Beispiel für das Plugin "Green Momit", müssen sie auf "Plugins" => "Wellness" => "Pluginname" gehen
 
 image:dev.plugin-simple_configuration01.png[]
 
-Dans la page du plugin, ajouter un équipement :
+Auf der Plugin-Seite fügen Sie ein Gerät hinzu :
 
 image:dev.plugin-simple_configuration02.png[]
 
-Spécifier le nom pour votre équipement :
+Geben Sie den Namen für das Gerät ein :
 
 image:dev.plugin-simple_configuration03.png[]
 
-Spécifier toutes les options de configuration de l'équipement agémenté d'exemple.
+Geben Sie alle Geräte-Konfigurations-Optionen komplett mit Beispiel an.
 
 image:dev.plugin-simple_configuration04.png[]
 
 [panel,info]
-.Soyer précis et complet
+.Soyer Genaue und vollständige
 --
-Il est important de se mettre à la place des futurs utilisateurs de votre plugin.
-Plus votre documentation sera complète, moins d'interrogations apparaitrons sur le forum
+Es ist wichtig, sich an der Stelle der künftigen Benutzer Ihres plugin zu stellen.
+Um so mehr Ihre Unterlagen vollständig sind, um so weniger Fragen  erscheinen in den Foren.
 --
 
-==== configuration du widget
+==== Widget-Konfiguration
 
-Comme pour la configuration présenter les options de configuration et leurs impacts sur le widget de votre plugin.
+Wie bei der Konfiguration präsentieren Sie die Konfigurationsoptionen und deren Auswirkungen auf das Widget von Ihrem Plugin.
 
-Mettre une ou plusieurs copies écran pour présenter le rendu final :
+Zeigen Sie einen oder mehrere Screenshots um das Endergebnis zu präsentieren :
 
 image:dev.plugin-simple_configuration05.png[]
 
-En fonction du niveau d'interactivité de votre plugin, décriver les actions possible au niveau du widjet.
+Je nach dem Grad der Interaktivität Ihres Plugins, können die Aktionen im Widget beschrieben sein.
 
-== Règles
+== Regeln
 
-=== Les images
+=== Die Bilder
 
-A compléter
+Ergänzungen
