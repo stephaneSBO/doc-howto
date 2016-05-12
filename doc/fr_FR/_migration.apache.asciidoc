@@ -14,6 +14,9 @@
 [IMPORTANT]
 En cas de soucis l'équipe Jeedom ne pourra etre tenu responsable et pourra refuser toute demande de support. La manipulation est à vos risques et périls
 
+[IMPORTANT]
+Attention certain plugin non officiel ne sont pas compatible Apache, renseignez vous bien avant.
+
 == Comment faire
 
 === Désactivation des services jeedom et de nginx
