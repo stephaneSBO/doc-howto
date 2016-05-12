@@ -59,7 +59,7 @@ chown www-data:www-data -R /var/www/html
 === Test d'accès
 
 ----
-systemctl start nginx
+systemctl start mysql
 ----
 
 Vous devriez maintenant pouvoir accèder à jeedom depuis la meme URL qu'avant. Si c'est bon vous pouvez continuer sinon il ne faut surtout pas faire la suite
@@ -77,8 +77,7 @@ systemctl disable nginx
 
 ----
 systemctl enable apache2
-systemctl start cron 
-systemctl start mysql
+systemctl start cron
 ----
 
 Ensuite connectez vous à votre jeedom et réactiver le moteur de tache, les scénarios. Vous pouvez aussi relancer les démons
