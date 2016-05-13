@@ -5,6 +5,7 @@
 - Apache va devenir petit à petit la norme avec Jeedom
 - Permet d'avoir les dernieres mise à jour de securité au niveau de l'accès aux fichiers (grace au .htaccess) lors des mises à jour de jeedom
 - Corrige certain soucis d'accès et de stabilité (notamment pour ceux qui ont beaucoup de caméra)
+- Améliore les performances global de jeedom
 
 == Pré-requis
 
@@ -46,11 +47,13 @@ systemctl restart apache2
 rm /var/www/html/index.html
 ----
 
+[NOTE]
+Si lors de l'installation le systeme vous demande si vous voulez ou non garder une version modifié d'un fichier faites : "Keep the local version currently installed"
+
 === Copie de Jeedom
 
 ----
 cp -R /usr/share/nginx/www/jeedom/* /var/www/html/
-cp -R /usr/share/nginx/www/jeedom/.* /var/www/html/
 rm /var/www/html/log/nginx.error
 chmod 775 -R /var/www/html
 chown www-data:www-data -R /var/www/html
@@ -80,7 +83,10 @@ systemctl enable apache2
 systemctl start cron
 ----
 
-Ensuite connectez vous à votre jeedom et réactiver le moteur de tache, les scénarios. Vous pouvez aussi relancer les démons
+Ensuite connectez vous à votre jeedom et réactiver le moteur de tache, les scénarios. Vous pouvez aussi relancer les démons.
+
+[IMPORTANT]
+Il est conseiller après la migration de lancer une mise à jour de jeedom (meme si il ne vous propose rien)
 
 
 
