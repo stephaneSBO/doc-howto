@@ -67,7 +67,7 @@ systemctl start mysql
 
 Vous devriez maintenant pouvoir accèder à jeedom depuis la meme URL qu'avant. Si c'est bon vous pouvez continuer sinon il ne faut surtout pas faire la suite
 
-== Mise à jour de la crontab
+=== Mise à jour de la crontab
 
 Faire : 
 
