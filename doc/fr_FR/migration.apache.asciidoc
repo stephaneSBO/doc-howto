@@ -84,7 +84,7 @@ Puis mettre à jour le chemin d'accès à jeedom, remplacer :
 Par : 
 
 ----
-* * * * * su --shell=/bin/bash - www-data -c '/usr/bin/php var/www/html/core/php/jeeCron.php' >> /dev/null 2>&1
+* * * * * su --shell=/bin/bash - www-data -c '/usr/bin/php /var/www/html/core/php/jeeCron.php' >> /dev/null 2>&1
 ----
 
 === Nettoyage et suppression de nginx
