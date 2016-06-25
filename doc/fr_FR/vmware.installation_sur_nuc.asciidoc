@@ -74,7 +74,7 @@ La c'est beaucoup plus simple il vous suffit de cliquer http://rufus.akeo.ie/dow
 
 La aussi c'est facile voila comment configurer rufus : 
 
-image::../images/installation.vmware.nuc2.PNG
+image::../images/installation.vmware.nuc2.PNG[]
 
 Il ne vous reste plus qu'a cliquer sur démarrer et attendre.
 
