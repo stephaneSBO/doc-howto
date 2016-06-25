@@ -1,5 +1,0 @@
-== How to ... ?
-
-[[Start my Mini+]]
-=== Unpacking and installing the Mini +
-include::mini.demarrage.asciidoc[]

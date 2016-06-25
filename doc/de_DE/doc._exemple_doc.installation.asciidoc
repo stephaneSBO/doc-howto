@@ -1,3 +1,0 @@
-Wenn Ihr Plugin keine Vorgaben bei der Installation hat, fügen Sie nur einen Verweis auf die Prozedur zum Installieren eines Plugins, die in der Dokumentation des Jeedom Kerns beschrieben ist:
-
-https://www.jeedom.fr/doc/documentation/core/fr_FR/doc-core-plugin.html

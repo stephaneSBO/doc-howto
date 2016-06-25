@@ -1,5 +1,0 @@
-== How to ... ? (Comment faire pour ... ?)
-
-[[Mettre en marche ma Mini+]]
-=== Déballage et installation de la Mini+
-include::mini.demarrage.asciidoc[]
