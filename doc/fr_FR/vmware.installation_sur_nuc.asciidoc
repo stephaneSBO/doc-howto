@@ -143,4 +143,8 @@ L'installation va prendre de 10 à 20min, ensuite il vous faudra enlever la clef
 
 image::../images/installation.vmware.nuc17.jpg[]
 
-Voila VMware est installé, plus qu'a jouer avec !!!
+Une fois le redemarrage fini vous devez avoir :
+
+image::../images/installation.vmware.nuc18.jpg[]
+
+Voila VMware est installé (en plus il est sympa il vous donne son IP) , plus qu'a jouer avec !!!
