@@ -23,7 +23,7 @@ Il ne vous reste plus qu'a cliquer sur démarrer, puis mettre la clef USB sur la
 
 === Sur une VM
 
-La manipulation est assez simple, vous creez une nouvelle machine virtuel, vous branché mettez un lecteur CD virtuel dessus qui pointe vers l'iso (pensez bien à la connecter) et vous lancer la machine
+La manipulation est assez simple, vous creez une nouvelle machine virtuel, vous branché mettez un lecteur CD virtuel dessus qui pointe vers l'iso (pensez bien à la connecter) et vous lancer la machine. Voir https://www.jeedom.com/doc/documentation/howto/fr_FR/doc-howto-vmware.creer_une_vm.html[ici] pour plus de détails.
 
 == Installation
 
