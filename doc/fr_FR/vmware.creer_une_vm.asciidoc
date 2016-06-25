@@ -161,3 +161,36 @@ image::../images/vmware.createvm26.PNG[]
 Cliquez sur "Résumé" puis "Modifier les paramètres" : 
 
 image::../images/vmware.createvm27.PNG[]
+
+Cliquez sur ajouter : 
+
+image::../images/vmware.createvm28.PNG[]
+
+Selectionnez "Contrôleur USB", puis faites suivante :
+
+image::../images/vmware.createvm29.PNG[]
+
+Selectionnez xHCI et faites suivant : 
+
+image::../images/vmware.createvm30.PNG[]
+
+Et cliquez sur terminer : 
+
+image::../images/vmware.createvm31.PNG[]
+
+[NOTE]
+Les étapes qui vont suivre sont à repéter pour chaque péripherique USB que vous voulez connecter
+
+Cliquez sur ajouter : 
+
+image::../images/vmware.createvm32.PNG[]
+
+Selectionnez "Périphérique USB" : 
+
+image::../images/vmware.createvm33.PNG[]
+
+Selectionner votre péripherique puis faite suivant et terminer :
+
+image::../images/vmware.createvm34.PNG[]
+
+Et voila votre péripherique est branché sur votre VM. A chaque redemarrage il sera automatique rebranché sur le VM et si vous le deconnectez/connectez physiquement alors celui-ci sera rebanché sur votre VM. En d'autre terme l'utilisation est maintenant totalement transparente.

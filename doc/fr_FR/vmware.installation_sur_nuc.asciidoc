@@ -148,3 +148,5 @@ Une fois le redemarrage fini vous devez avoir :
 image::../images/installation.vmware.nuc18.jpg[]
 
 Voila VMware est installé (en plus il est sympa il vous donne son IP) , plus qu'a jouer avec !!!
+
+Pour la suite voici un https://www.jeedom.com/doc/documentation/howto/fr_FR/doc-howto-vmware.creer_une_vm.html[tutoriel] pour la création de votre premiere VM
