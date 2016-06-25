@@ -62,7 +62,7 @@ C'est le plus dur en faite je crois, pour vous simplifier la vie il faut :
 - ensuite aller https://my.vmware.com/fr/web/vmware/details?productId=491&downloadGroup=ESXI60U2[la] et ajouter à votre compte "ESXi ISO image (Includes VMware Tools)"
 - enfin retourner https://my.vmware.com/en/web/vmware/evalcenter?p=free-esxi6[ici] et la vous devez avoir dans "Downlaod Packages", un package "ESXi ISO image (Includes VMware Tools)" qu'il vous faut télécharger
 
-image::../images/installation.vmware.nuc.PNG.png[]
+image::../images/installation.vmware.nuc.PNG[]
 
 Juste au dessus vous avez aussi votre clef de licence, vous pouvez en profiter pour la récuperer.
 
