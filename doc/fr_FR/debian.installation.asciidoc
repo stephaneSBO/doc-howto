@@ -162,3 +162,5 @@ Il faut ensuite redemarrer le machine :
 ----
 sudo reboot
 ----
+
+Il ne vous reste plus qu'a installer jeedom en suivant https://www.jeedom.com/doc/documentation/installation/fr_FR/doc-installation.html#_autre[ceci]
