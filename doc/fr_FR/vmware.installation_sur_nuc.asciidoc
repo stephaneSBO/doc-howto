@@ -78,4 +78,69 @@ image::../images/installation.vmware.nuc2.PNG[]
 
 Il ne vous reste plus qu'a cliquer sur démarrer et attendre.
 
-== Installaiton de VMware
+== Déballage et assemblage du NUC
+
+Voila les 3 composants pour mon NUC : 
+
+- Intel NUC NUC6I5SYH
+- Samsung SSD 850 EVO 250 Go M.2
+- CORSAIR VENGEANCE SO-DIMM DDR4 16 GO (2 X 8 GO) 2400 MHZ CL16
+
+image::../images/installation.vmware.nuc3.jpg[]
+
+La boite du NUC :
+
+image::../images/installation.vmware.nuc4.jpg[]
+
+Ouverture de celle-ci :
+
+image::../images/installation.vmware.nuc5.jpg[]
+
+Les composants sortie de leur boite :
+
+image::../images/installation.vmware.nuc6.jpg[]
+
+Ouverture du NUC, la c'est très simple, mettez le à l'envers, dévissez les 4 vis sous les pied (elle ne sorte pas en plein c'est normal il faut juste les déviser), puis tirer legèrement sur les vis pour ouvrir le nuc : 
+
+image::../images/installation.vmware.nuc7.jpg[]
+
+Le SSD installé (sur la gauche), la vis en bout pour le bloquer est un peu pénible à remettre, heureusement on ne fait ca que une fois
+
+image::../images/installation.vmware.nuc8.jpg[]
+
+Installation de la mémoire (à droite) :
+
+image::../images/installation.vmware.nuc10.jpg[]
+
+Et voila, vous pouvez refermer (à moins bien sur que vous ayez pris en SSD 2.5 pouces qu'il faut dans ce cas inserer dans le couvercle).
+
+== Installation de VMware
+
+La c'est très simple il suffit de mettre la clef USB sur l'un des ports USB du NUC, de brancher un écran sur le port HDMI, un clavier et l'alimentation. VOus allumé le NUC, l'installation se lancera toute seule :
+
+image::../images/installation.vmware.nuc11.jpg[]
+
+[NOTE]
+J'ai oublié de faire les captures de la validation de la licence, il faut juste être d'accord en suivant les instructions
+
+Ici selectionnez bien le disque correspondant au SSD (vous pouvez le reperer soit par le nom soit par la taille)
+
+image::../images/installation.vmware.nuc13.jpg[]
+
+Selectionnez "French" :
+
+image::../images/installation.vmware.nuc14.jpg[]
+
+Mettez un mot passe, ici debut je vous conseille de mettre un truc simple comme "oooo" (on le changera par la suite) :
+
+image::../images/installation.vmware.nuc15.jpg[]
+
+Validez en faisant F11 :
+
+image::../images/installation.vmware.nuc16.jpg[]
+
+L'installation va prendre de 10 à 20min, ensuite il vous faudra enlever la clef USB et attendre que le systeme reboot
+
+image::../images/installation.vmware.nuc17.jpg[]
+
+Voila VMware est installé, plus qu'a jouer avec !!!
