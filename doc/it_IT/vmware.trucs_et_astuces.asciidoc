@@ -1,0 +1,68 @@
+= Trucs et astuces sur VMware
+
+Pas vraiment un howto ici mais plus un recueils de trucs et astuces sur VMware
+
+== Ajouter sa licence
+
+Une fois connecter sur l'interface web (IP_ESXI/ui) il faut aller sur "Gerer" : 
+
+image::../images/vmware.tips.PNG[]
+
+Puis sur "Attribution de licence" et cliquer sur "Attribuer une licence"
+
+image::../images/vmware.tips2.PNG[]
+
+Et rentrer votre clef de licence
+
+image::../images/vmware.tips3.PNG[]
+
+[NOTE]
+Pour rappels si vous ne le faite pas votre esxi risque de ne plus marcher au bout de 60 jours
+
+== Monter un datastore NFS avec un Synology
+
+On va voir ici comment monter un partage NFS depuis un Synology sur VMware. Cela permet par exemple de mettre les machines virtuels sur le Synology (qui peut avoir plus de place que l'ESXi) ou d'envoyer les backups des machines sur le Synology
+
+=== Configuration du Synology
+
+Il faut aller sur le panneau de configuration puis "Services de fichiers" et cocher la case "Activer NFS" : 
+
+image::../images/vmware.tips4.PNG[]
+
+Ensuite il faut cliquer sur "Dossier partagé", puis choisir le dossier à partager (ici Backup), cliquer sur modifier puis "Autorisation NFS" et enfin sur créer (ici j'en ai déja une, votre liste à vous devrez être vide) : 
+
+image::../images/vmware.tips5.PNG[]
+
+Ensuite vous mettez l'IP de votre ESXi et dans "Squash" vous mettez "Mappage de tous les utilisateurs sur admin" puis vous validez :
+
+image::../images/vmware.tips6.PNG[]
+
+Il faut ensuite recupérer le chemin du partage (ici /volume2/Backup) : 
+
+image::../images/vmware.tips7.PNG[]
+
+Voila c'est fini du coté Synology, on va maintenant passer coté ESXi
+
+=== Configuration de l'ESXi
+
+Il faut aller sur "Stockage" :
+
+image::../images/vmware.tips8.PNG[]
+
+Puis cliquer sur "Nouvelle banque de données" : 
+
+image::../images/vmware.tips9.PNG[]
+
+La vous selectionnez "Monter une banque de données NFS" puis faites suivant : 
+
+image::../images/vmware.tips10.PNG[]
+
+Entrée le nom du datastore à créer (attention à eviter les espaces et caractères spéciaux), mettez l'IP de notre Synology et mettez le chemin du partage (voir au dessus) et enfin validez : 
+
+image::../images/vmware.tips11.PNG[]
+
+Cliquez sur terminez : 
+
+image::../images/vmware.tips12.PNG[]
+
+Et voila votre nouveau datastore devrait apparaitre (sinon cliquez sur "Actualiser").
