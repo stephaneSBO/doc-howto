@@ -124,3 +124,25 @@ image::../images/vmware.createvm1.PNG[]
 Vous avez juste à rentrer l'IP de votre ESXI, le nom d'utilisateur et le mot de passe et vous voila connecté dessus : 
 
 image::../images/vmware.createvm2.PNG[]
+
+== Mise à jour de l'ESXi
+
+La procedure est assez facile, il faut tout d'abord recuperer le patch en allant https://my.vmware.com/web/vmware/login#search[ici] (il vous faudra surement vous connecter avec votre compte vmware). Sur la liste "Select a Product" mettez "ESXi (Embedded and Installable)", en face laisser la derniere version de vmware et faites "Search". Puis télécharger le patch voulu (en générale le dernier). Le build number (le premier numéro pas celui commencant par KB) vous donne la version du patch que vous pouvez comparer avec votre build number.
+
+Ensuite transferez le zip sur un de vos datastore et faite : 
+
+----
+esxcli software vib update -d /vmfs/volumes/576c8ab3-fdf64d2f-091b-b8aeedeb87fb/ESXi600-201605001.zip
+----
+
+[NOTE]
+Remplacer bien le chemin et le nom du zip en fonction de votre configuration
+
+[IMPORTANT]
+Attention à bien mettre le chemin complet vers le zip sinon ca ne marche pas
+
+La commande au dessus ne mets à jour que les vib qui en ont besoin mais vous pouvez forcer l'installation de tous les vib du package (donc attention cela peux faire un downgrade) en faisant : 
+
+----
+esxcli software vib install -d /vmfs/volumes/576c8ab3-fdf64d2f-091b-b8aeedeb87fb/ESXi600-201605001.zip
+----
