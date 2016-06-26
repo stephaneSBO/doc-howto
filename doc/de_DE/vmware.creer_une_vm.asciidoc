@@ -7,33 +7,18 @@ Il y a avant une petit chose importante à savoir sur VMware, il y a 2 moyen de 
 - l'interface web (présente par défaut en 6.0 update 2, ou par le biais d'un vib pour les autres version), on y accede par IP_ESXI/ui
 - le client lourd et historique de VMware (vSphere client)
 
-Ici j'utiliserais principalement l'interface web car je pense que c'est l'avenir de vmware qui délaisse de plus en plus le client lourd (d'ailleurs toute les nouveautée depuis la 5.1 ne sont pas utilisable avec le client lourd). En revanche à la fin du tutoriel pour la partie gestion de l'USB on sera obligé de passer par le client lourd car je n'ai pas trouvé comment faire par l'interface web.
+Ici j'utiliserais principalement l'interface web car je pense que c'est l'avenir de vmware qui délaisse de plus en plus le client lourd (d'ailleurs toute les nouveautée depuis la 5.1 ne sont pas utilisable avec le client lourd). 
 
-A noter aussi que l'interface web est toujours en cours de mise en place chez vmware, eneffet vous allez surement rencontrer quelques bugs ou ralentissement avec mais un petit rafrachissement de la page et ca repart sans soucis.
-
-== Installation du client lourd (facultatif)
-
-Cette partie est facultative si vous n'avez pas besoin de gerer l'USB.
-
-Il vous faut aller, avec votre navigateur internet, sur l'IP de l'ESXI puis cliquer sur le lien "Download vSphere Client for Windows" : 
-
-image::../images/vmware.createvm.PNG[]
-
-Une fois télécharger il vous suffit de lancer l'installation (je passe volontairement sur cette partie car il suffit de tout valider).
-
-Ensuite lancez VMware vSphere Client, vous devez avoir : 
-
-image::../images/vmware.createvm1.PNG[]
-
-Vous avez juste à rentrer l'IP de votre ESXI, le nom d'utilisateur et le mot de passe et vous voila connecté dessus : 
-
-image::../images/vmware.createvm2.PNG[]
+A noter aussi que l'interface web est toujours en cours de mise en place chez vmware, en effet vous allez surement rencontrer quelques bugs ou ralentissement avec mais un petit rafrachissement de la page et ca repart sans soucis.
 
 == Connexion à l'interface web
 
 Allez sur IP_ESXI/ui avec votre navigateur internet, vous devez avoir : 
 
 image::../images/vmware.createvm3.PNG[]
+
+[NOTE]
+Si vous n'avez rien je vous conseil de faire l'installation de l'interface web, toute les informations https://www.jeedom.com/doc/documentation/howto/fr_FR/doc-howto-vmware.trucs_et_astuces.html[ici] 
 
 Entrez vos identifiants de connexion à l'ESXI : 
 
@@ -143,54 +128,31 @@ Pour la suite de l'installation je vous invite à lire ce https://www.jeedom.com
 
 == Monter les péripheriques USB dans la VM
 
-Comme dit au tout début pour le moment il faut absolument passer par le client lourd pour pouvoir virtuellement branché les péripheriques USB de l'ESXI sur une VM.
+[NOTE]
+Si vous n'avez pas les options ci-dessous c'est qu'il faut mettre à jour l'ESXi Embedded Host Client , toute les informations https://www.jeedom.com/doc/documentation/howto/fr_FR/doc-howto-vmware.trucs_et_astuces.html[ici] 
 
 C'est un besoin assez rare, mais j'ai du m'en servir pour Jeedom, en effet j'ai sur mon ESXI les clefs Zwave, RFXcom, edisio, enOcean et GSM de branchés et il me fallait les relier à ma VM Jeedom pour pouvoir m'en servir.
 
 [NOTE]
 Pour Zwave, RFXcom, edisio et enOcean il n'y a aucun soucis, pour les clefs GSM il vous suivre ce https://www.jeedom.com/doc/documentation/howto/fr_FR/doc-howto-gsm.huawei_mode_modem.html[tutoriel] avant pour forcer la clef en mode modem seulement sinon celle-ci n'est pas vu correctement sur l'esxi.
 
-Une fois connecté avec le client lourd (voir chapitre précedent), cliquez sur "Inventaire" : 
+Allez sur votre VM puis faites "Modifier les paramètres" :
 
 image::../images/vmware.createvm25.PNG[]
 
-Dépliez la liste des vm (petit +) et cliquez sur la VM voulu : 
+Cliquez sur "Ajouter un autre périphérique" puis controleur USB :
 
 image::../images/vmware.createvm26.PNG[]
 
-Cliquez sur "Résumé" puis "Modifier les paramètres" : 
+[NOTE]
+Le'étape qui suis devra être repété pour chaque péripherique USB que vous voulez connecter
+
+Enregistrez, refaite "Modifier les paramètres", puis "Ajouter un autre périphérique" et "USB device" : 
 
 image::../images/vmware.createvm27.PNG[]
 
-Cliquez sur ajouter : 
+Choisissez votre péripherique USB dans la liste déroulante :
 
 image::../images/vmware.createvm28.PNG[]
-
-Selectionnez "Contrôleur USB", puis faites suivante :
-
-image::../images/vmware.createvm29.PNG[]
-
-Selectionnez xHCI et faites suivant : 
-
-image::../images/vmware.createvm30.PNG[]
-
-Et cliquez sur terminer : 
-
-image::../images/vmware.createvm31.PNG[]
-
-[NOTE]
-Les étapes qui vont suivre sont à repéter pour chaque péripherique USB que vous voulez connecter
-
-Cliquez sur ajouter : 
-
-image::../images/vmware.createvm32.PNG[]
-
-Selectionnez "Périphérique USB" : 
-
-image::../images/vmware.createvm33.PNG[]
-
-Selectionner votre péripherique puis faite suivant et terminer :
-
-image::../images/vmware.createvm34.PNG[]
 
 Et voila votre péripherique est branché sur votre VM. A chaque redemarrage il sera automatique rebranché sur le VM et si vous le deconnectez/connectez physiquement alors celui-ci sera rebanché sur votre VM. En d'autre terme l'utilisation est maintenant totalement transparente.

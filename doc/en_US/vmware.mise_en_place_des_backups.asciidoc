@@ -14,19 +14,18 @@ Pour ce tuto je vais utiliser l'interface Web de l'esxi qui est disponible soit 
 
 == Installation de ghettoVCB
 
+Il faut recuperer ce https://raw.githubusercontent.com/lamw/ghettoVCB/master/ghettoVCB.sh[script] et le transferer vers l'ESXi (sur le meme datastore que celui qui va accueillir les backups par exemple).
+
+[NOTE]
+Dans la suite de ce tuto je considerais que vous avaez mis le script ghettoVCB.sh dans /vmfs/volumes/Backup/ghettoVCB.sh. A vous d'adapter en fonction de votre configuration les commandes/scripts fournis.
+
+== Connexion en ssh
+
 Il va falloir vous connecter en SSH sur l'esxi, pour se faire il faut a partir de l'interface 
 
 image::../images/vmware.backup.PNG[]
 
 Ensuite avec putty ou kitty connectez vous dessus en mettant l'ip de votre ESXI et en utilisant vos identifiants de celui-ci
-
-Ensuite il faut taper : 
-
-----
-esxcli software vib install -v https://github.com/lamw/ghettoVCB/raw/master/vghetto-ghettoVCB.vib -f
-----
-
-Ca prend un peut de temps mais ca va automatiquement installer ghettoVCB dans /opt/ghettovcb
 
 == Création du fichier de configuration
 
@@ -81,7 +80,7 @@ Attention à bien mettre le / final pour le parametre VM_BACKUP_VOLUME sinon le 
 Nous allons ici lancer un premier backup initial de tous les VMs pour voir si tout est ok, par la suite nous le planifierons en automatique. Retourner sur l'esxi en SSH (reconnectez vous si necessaire) et faites : 
 
 ----
-/opt/ghettovcb/bin/ghettoVCB.sh -a -g /vmfs/volumes/Backup/ghettoVCB.conf
+/vmfs/volumes/Backup/ghettoVCB.sh -a -g /vmfs/volumes/Backup/ghettoVCB.conf
 ----
 
 Cela va lancer un backup de toute vos VMs (et peut donc prendre pas mal de temps). A la fin vous devriez avoir sur votre datastore de backup un dossier par VM et dans chaque dossier de VMs un sous-dossier par date contenant 4 fichiers : 
@@ -98,19 +97,19 @@ Voici d'autre possibilité pour la ligne de commande :
 - Simulation de backup :
 
 ----
-/opt/ghettovcb/bin/ghettoVCB.sh -d dryrun -a -g /vmfs/volumes/Backup/ghettoVCB.conf
+/vmfs/volumes/Backup/ghettoVCB.sh -d dryrun -a -g /vmfs/volumes/Backup/ghettoVCB.conf
 ----
 
 - Lancement en mode debug :
 
 ----
-/opt/ghettovcb/bin/ghettoVCB.sh -d debug -a -g /vmfs/volumes/Backup/ghettoVCB.conf
+/vmfs/volumes/Backup/ghettoVCB.sh -d debug -a -g /vmfs/volumes/Backup/ghettoVCB.conf
 ----
 
 - Backup seulement la vm "toto"
 
 ----
-/opt/ghettovcb/bin/ghettoVCB.sh -m toto -a -g /vmfs/volumes/Backup/ghettoVCB.conf
+/vmfs/volumes/Backup/ghettoVCB.sh -m toto -a -g /vmfs/volumes/Backup/ghettoVCB.conf
 ----
 
 == Lancement automatique des backups
@@ -118,14 +117,14 @@ Voici d'autre possibilité pour la ligne de commande :
 Il faut ajouter la ligne de commande à la crontab mais sous vmware la crontab est un peu spécial et surtout écrasée à chaque démarrage, pour eviter cela il faut donc ajouter un petit script qui mettra à jour la crontab au boot (vous inquietez pas c'est assez simple et rapide), en ssh sur l'esxi faire : 
 
 ----
-vi /etc/rc.local
+vi /etc/rc.local.d/local.sh
 ----
 
 Et avant le "exit 0" ajouter les lignes suivantes : 
 
 ----
 /bin/kill $(cat /var/run/crond.pid)
-/bin/echo "0 0 1 * * /opt/ghettovcb/bin/ghettoVCB.sh -a -g /vmfs/volumes/Backup/ghettoVCB.conf >/dev/null 2>&1" >> /var/spool/cron/crontabs/root
+/bin/echo "0 0 1 * * /vmfs/volumes/Backup/ghettoVCB.sh -a -g /vmfs/volumes/Backup/ghettoVCB.conf >/dev/null 2>&1" >> /var/spool/cron/crontabs/root
 /usr/lib/vmware/busybox/bin/busybox crond
 ----
 
@@ -133,7 +132,7 @@ Et avant le "exit 0" ajouter les lignes suivantes :
 Ici je demande un backup tout les 1er du mois, vous pouvez changer cela en modifiant : 0 0 1 * *
 
 [NOTE]
-Ici je fais un backup de toute les vms, vous pouvez adapter cela en remplacant le -a par -m ma_vm, attention si vous voulez mettre plusieurs vm il faut dupliquer la ligne "/bin/echo "0 0 1 * * /opt/ghettovcb/bin/ghettoVCB.sh -a -g /vmfs/volumes/Backup/ghettoVCB.conf >/dev/null 2>&1" >> /var/spool/cron/crontabs/root" et en mettre une par VM à backuper
+Ici je fais un backup de toute les vms, vous pouvez adapter cela en remplacant le -a par -m ma_vm, attention si vous voulez mettre plusieurs vm il faut dupliquer la ligne "/bin/echo "0 0 1 * * /vmfs/volumes/Backup/ghettoVCB.sh -a -g /vmfs/volumes/Backup/ghettoVCB.conf >/dev/null 2>&1" >> /var/spool/cron/crontabs/root" et en mettre une par VM à backuper
 
 [IMPORTANT]
 N'oubliez pas d'adapter le chemin vers le fichier de configuration de ghettoVCB en fonction de votre configuration : /vmfs/volumes/Backup/ghettoVCB.conf
@@ -148,5 +147,5 @@ cat /var/spool/cron/crontabs/root
 Ici vous devez avoir une ligne : 
 
 ----
-0 0 1 * * /opt/ghettovcb/bin/ghettoVCB.sh -a -g /vmfs/volumes/Backup/ghettoVCB.conf >/dev/null 2>&1
+0 0 1 * * /vmfs/volumes/Backup/ghettoVCB.sh -a -g /vmfs/volumes/Backup/ghettoVCB.conf >/dev/null 2>&1
 ----

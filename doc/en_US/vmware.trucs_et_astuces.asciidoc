@@ -66,3 +66,83 @@ Cliquez sur terminez :
 image::../images/vmware.tips12.PNG[]
 
 Et voila votre nouveau datastore devrait apparaitre (sinon cliquez sur "Actualiser").
+
+== Ajout du plugin VAAI Synology pour montage NFS
+
+L'ajout de ce plugin permet d'active l'acceleration matériels sur les montages NFS (pour explication voir http://www.virtual-sddc.ovh/exploiter-les-vaai-nfs-avec-un-nas-synology/[ici])
+
+Pour voir si vous l'avez, il faut se connecter avec le client lourd (j'ai pas trouvé l'info sur le client web) et aller dans configuration -> stockage : 
+
+image::../images/vmware.tips13.PNG[]
+
+La mise en place est assez simple, d'abord il faut activer le service SSH de l'ESXi (sur l'interface web il faut aller dans action => services => Actvier Secure Shell), puis se connecter en ssh dessus (les identifiants sont les même que pour accéder à l'interface). Ensuite il vous suffit de faire : 
+
+----
+esxcli software vib install -v https://global.download.synology.com/download/Tools/NFSVAAIPlugin/1.0-0001/VMware_ESXi/esx-nfsplugin.vib -f
+----
+
+Vous devez avoir : 
+
+image::../images/vmware.tips14.PNG[]
+
+Il faut ensuite redemarrer l'ESXi, pour vérifier que c'est ok il faut ensuite retourner avec le client lourd dans configuration -> stockage :
+
+image::../images/vmware.tips15.PNG[]
+
+== Installer/Mettre à jour l'ESXi Embedded Host Client
+
+ESXi Embedded Host Client est une interface web (en HTML5) de l'ESXi qui permet dans 95% des cas de se passer du client lourd. Elle est présente par defaut à partie de la version 6.0 update 2 (mais en version 1.0, il est vivement conseillé de la mettre à jour).
+
+Vous trouverez toutes les information https://labs.vmware.com/flings/esxi-embedded-host-client[ici]
+
+Pour voir si vous l'avez il suffit d'aller avec votre navigateur sur IP_ESXI/ui si vous n'avez rien il vous faut l'installer, il faut d'abord se connecter en SSH sur l'ESXI puis faire : 
+
+----
+esxcli software vib install -v http://download3.vmware.com/software/vmw-tools/esxui/esxui-signed-3976049.vib
+----
+
+Si vous l'avez déjà pour le mettre à jour il faut : 
+
+----
+esxcli software vib update -v http://download3.vmware.com/software/vmw-tools/esxui/esxui-signed-3976049.vib
+----
+
+== Installation du client lourd
+
+Cette partie est facultative si vous n'avez pas besoin de gerer l'USB.
+
+Il vous faut aller, avec votre navigateur internet, sur l'IP de l'ESXI puis cliquer sur le lien "Download vSphere Client for Windows" : 
+
+image::../images/vmware.createvm.PNG[]
+
+Une fois télécharger il vous suffit de lancer l'installation (je passe volontairement sur cette partie car il suffit de tout valider).
+
+Ensuite lancez VMware vSphere Client, vous devez avoir : 
+
+image::../images/vmware.createvm1.PNG[]
+
+Vous avez juste à rentrer l'IP de votre ESXI, le nom d'utilisateur et le mot de passe et vous voila connecté dessus : 
+
+image::../images/vmware.createvm2.PNG[]
+
+== Mise à jour de l'ESXi
+
+La procedure est assez facile, il faut tout d'abord recuperer le patch en allant https://my.vmware.com/web/vmware/login#search[ici] (il vous faudra surement vous connecter avec votre compte vmware). Sur la liste "Select a Product" mettez "ESXi (Embedded and Installable)", en face laisser la derniere version de vmware et faites "Search". Puis télécharger le patch voulu (en générale le dernier). Le build number (le premier numéro pas celui commencant par KB) vous donne la version du patch que vous pouvez comparer avec votre build number.
+
+Ensuite transferez le zip sur un de vos datastore et faite : 
+
+----
+esxcli software vib update -d /vmfs/volumes/576c8ab3-fdf64d2f-091b-b8aeedeb87fb/ESXi600-201605001.zip
+----
+
+[NOTE]
+Remplacer bien le chemin et le nom du zip en fonction de votre configuration
+
+[IMPORTANT]
+Attention à bien mettre le chemin complet vers le zip sinon ca ne marche pas
+
+La commande au dessus ne mets à jour que les vib qui en ont besoin mais vous pouvez forcer l'installation de tous les vib du package (donc attention cela peux faire un downgrade) en faisant : 
+
+----
+esxcli software vib install -d /vmfs/volumes/576c8ab3-fdf64d2f-091b-b8aeedeb87fb/ESXi600-201605001.zip
+----
