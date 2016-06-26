@@ -88,3 +88,39 @@ image::../images/vmware.tips14.PNG[]
 Il faut ensuite redemarrer l'ESXi, pour vérifier que c'est ok il faut ensuite retourner avec le client lourd dans configuration -> stockage :
 
 image::../images/vmware.tips15.PNG[]
+
+== Installer/Mettre à jour l'ESXi Embedded Host Client
+
+ESXi Embedded Host Client est une interface web (en HTML5) de l'ESXi qui permet dans 95% des cas de se passer du client lourd. Elle est présente par defaut à partie de la version 6.0 update 2 (mais en version 1.0, il est vivement conseillé de la mettre à jour).
+
+Vous trouverez toutes les information https://labs.vmware.com/flings/esxi-embedded-host-client[ici]
+
+Pour voir si vous l'avez il suffit d'aller avec votre navigateur sur IP_ESXI/ui si vous n'avez rien il vous faut l'installer, il faut d'abord se connecter en SSH sur l'ESXI puis faire : 
+
+----
+esxcli software vib install -v http://download3.vmware.com/software/vmw-tools/esxui/esxui-signed-3976049.vib
+----
+
+Si vous l'avez déjà pour le mettre à jour il faut : 
+
+----
+esxcli software vib update -v http://download3.vmware.com/software/vmw-tools/esxui/esxui-signed-3976049.vib
+----
+
+== Installation du client lourd (facultatif)
+
+Cette partie est facultative si vous n'avez pas besoin de gerer l'USB.
+
+Il vous faut aller, avec votre navigateur internet, sur l'IP de l'ESXI puis cliquer sur le lien "Download vSphere Client for Windows" : 
+
+image::../images/vmware.createvm.PNG[]
+
+Une fois télécharger il vous suffit de lancer l'installation (je passe volontairement sur cette partie car il suffit de tout valider).
+
+Ensuite lancez VMware vSphere Client, vous devez avoir : 
+
+image::../images/vmware.createvm1.PNG[]
+
+Vous avez juste à rentrer l'IP de votre ESXI, le nom d'utilisateur et le mot de passe et vous voila connecté dessus : 
+
+image::../images/vmware.createvm2.PNG[]
