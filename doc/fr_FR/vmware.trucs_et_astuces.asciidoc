@@ -107,7 +107,7 @@ Si vous l'avez déjà pour le mettre à jour il faut :
 esxcli software vib update -v http://download3.vmware.com/software/vmw-tools/esxui/esxui-signed-3976049.vib
 ----
 
-== Installation du client lourd (facultatif)
+== Installation du client lourd
 
 Cette partie est facultative si vous n'avez pas besoin de gerer l'USB.
 
