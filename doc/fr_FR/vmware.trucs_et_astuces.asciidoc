@@ -66,3 +66,25 @@ Cliquez sur terminez :
 image::../images/vmware.tips12.PNG[]
 
 Et voila votre nouveau datastore devrait apparaitre (sinon cliquez sur "Actualiser").
+
+== Ajout du plugin VAAI Synology pour montage NFS
+
+L'ajout de ce plugin permet d'active l'acceleration matériels sur les montages NFS (pour explication voir http://www.virtual-sddc.ovh/exploiter-les-vaai-nfs-avec-un-nas-synology/[ici])
+
+Pour voir si vous l'avez, il faut se connecter avec le client lourd (j'ai pas trouvé l'info sur le client web) et aller dans configuration -> stockage : 
+
+image::../images/vmware.tips13.PNG[]
+
+La mise en place est assez simple, d'abord il faut activer le service SSH de l'ESXi (sur l'interface web il faut aller dans action => services => Actvier Secure Shell), puis se connecter en ssh dessus (les identifiants sont les même que pour accéder à l'interface). Ensuite il vous suffit de faire : 
+
+----
+esxcli software vib install -v https://global.download.synology.com/download/Tools/NFSVAAIPlugin/1.0-0001/VMware_ESXi/esx-nfsplugin.vib -f
+----
+
+Vous devez avoir : 
+
+image::../images/vmware.tips14.PNG[]
+
+Il faut ensuite redemarrer l'ESXi, pour vérifier que c'est ok il faut ensuite retourner avec le client lourd dans configuration -> stockage :
+
+image::../images/vmware.tips15.PNG[]
