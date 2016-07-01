@@ -146,3 +146,21 @@ La commande au dessus ne mets à jour que les vib qui en ont besoin mais vous po
 ----
 esxcli software vib install -d /vmfs/volumes/576c8ab3-fdf64d2f-091b-b8aeedeb87fb/ESXi600-201605001.zip
 ----
+
+== Configuration du NTP
+
+Par défaut l'ESXi n'utilise pas le ntp ce qui fait qu'il n'est pas à l'heure et que les VMs ne sont pas à l'heure, pour corriger c'est très simple. Il faut aller à partir de la version web sur Gérer -> Système -> Date et heure, la vous cliquez sur "Modifier les paramètres" :
+
+image::../images/vmware.tips16.PNG[]
+
+Et dans la case "Serveur NTP" il faut mettre : 0.debian.pool.n, 1.debian.pool.n, 2.debian.pool.n, 3.debian.pool.n, time.nist.gov
+
+image::../images/vmware.tips17.PNG[]
+
+Ensuite dans Actions -> Service NTP -> Strategie cliquez sur "Démarrer et arrêter avec l'hôte" :
+
+image::../images/vmware.tips18.PNG[]
+
+Toujours dans Actions -> Service NTP cliquez sur "Démarrer"
+
+Voila votre esxi devrait prendre la bonne heure tout seul maintenant.
