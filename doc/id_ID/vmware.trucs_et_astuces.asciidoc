@@ -164,3 +164,40 @@ image::../images/vmware.tips18.PNG[]
 Toujours dans Actions -> Service NTP cliquez sur "Démarrer"
 
 Voila votre esxi devrait prendre la bonne heure tout seul maintenant.
+
+== Accès extérieur à l'ESXi
+
+Pour acceder à l'ESXi de l'exterieur il vous faut : 
+
+- ouvrir le port 443 vers le 443 de l'ESXi
+- ouvrir le port 902 vers le 902 de l'ESXi
+
+Et voila c'est tout. Petite astuce si vous avez un nas Synology vous pouvez faire (attention faut suivre) :
+
+- ouvrir le 443 vers le 5001 du NAS Synology
+- ouvrir le 80 vers le 80 du NAS (utile juste pour generer les certificats let's encrypt)
+- ouvrir le port 902 vers le 902 de l'ESXi
+
+Ensuite sur le NAS dans le panneau de configuration puis portails d'application et proxy inversé (attention il faut absolument DSM 6) :
+
+image::../images/vmware.tips19.PNG[]
+
+Cliquez sur creer et mettre : 
+
+image::../images/vmware.tips20.PNG[]
+
+Dans "Nom d'hôte" (au niveau de la source) il faut mettre le DNS voulu (par exemple monesxi.mondsn.synology.me) et dans "Nom d'hôte" (au niveau de la destination) il faut mettre l'ip de l'ESXi
+
+[NOTE]
+Vous pouvez faire aussi la meme chose pour acceder à jeedom mais en mettant cette fois l'ip de jeedom (de la vm si vous êtes en virtualisé) et le port 80
+
+[NOTE]
+Une fois que vous avez fait ca et si votre DNS pointe correctement sur le NAS vous pouvez generer un certificat SSL valide gratuitement avec Let's encrypt, en allant dans Sécruité => certificat et en faisant ajouter. Ensuite n'oubliez pas de cliquer sur configurer pour l'affecter à votre proxy inversé
+
+Ensuite pour acceder à votre ESXi il vous suffit avec votre navigateur d'aller sur votre DNS ou IP externe en ajoutant /ui à la fin et c'est bon. 
+
+[IMPORTANT]
+Si vous passez par le reverse proxy du NAS la console en mode web des VMs ne marche pas (car ca passe par du websocket), en revanche si vous passez par VMware remote console tout devrait etre ok (ca passe par le port 902)
+
+[NOTE]
+Il existe aussi une application Vmware Watchlist sur Android pour avoir accès à l'ESXi ainsi qu'aux consoles des VMs
