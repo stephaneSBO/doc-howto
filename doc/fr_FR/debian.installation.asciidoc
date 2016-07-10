@@ -149,6 +149,14 @@ Fail2ban est un logiciel qui permet de sécuriser l'accès à votre debian, en c
 sudo apt-get install -y fail2ban
 ----
 
+=== Ajouter les Open VMware Tools
+
+Les Open VMware Tools install les drivers spécifiques au système d'exploitation installé et apportent les optimisations de cet OS hébergé sur un hyperviseur ESXi.
+
+----
+sudo apt-get install -y open-vm-tools
+----
+
 === Mettre /tmp en ram
 
 Jeedom utilise /tmp comme systeme de cache le mettre en ram permet donc d'alleger les écritures sur disque et d'accelerer Jeedom : 
