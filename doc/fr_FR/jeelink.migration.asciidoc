@@ -1,0 +1,48 @@
+= Migration mode esclave Jeedom vers JeeLink
+
+Nous allons voir ici comment migrer une installation de Jeedom en mode esclave vers une Jeedom en mode JeeLink.
+Le mode esclave Jeedom étant abandoné lors du passage de Jeedom 2.5, il est nécessaire de procéder à la migration sur le nouveau mode de fonctionnement.
+
+== Préparation avant migration
+WARNING: Il est important de lire l'intégralité de ce chapitre avant de vous lancer de la migration. Des informations importantes concernant la mise à jour prérequis, la sauvegarde et la récupération d'information sont indispensables à la bonne compréhension de l'opération à mener. Vous abstenir de lire cette documentation peut entrainer des opérations destructives sur votre installation.
+
+
+=== Mises à jour et Verifification Configuration
+
+* Mettre à jour le Jeedom Maître à la dernière version (Même si aucune mise à jour ne vous est proposée).
+* Mettre à jour les plugins du Jeedom Maître aux dernières version disponibles.
+* Vérifier dans la page Santé que la configuration réseau interne du Maître est OK (Et externe si vos Jeedoms seront distants).
+
+=== Rassemblement des informations utiles
+En fonction des plugins installés sur votre Jeedom esclave, il est nécessaire de récupérer les informations suivantes :
+
+==== Plugin Zwave
+* Dans la page santé du plugin zwave sur le Maître, choisir votre esclave dans le menu déroulant et faire une copie d'écran pour disposer d'une liste des équipements qui viennent de l'esclave.
+* Noter pour chaque équipement venant de l'esclave : L'objet parent, Le nom, L'ID (Node), Le Modèle.
+
+==== Plungin RFXcom
+* Noter pour chaque équipement venant de l'esclave : L'objet parent, Le nom, L'ID (Logique), Le Type, Le Modèle.
+
+=== Sauvegardes préventives 
+* Faire une sauvegarde Jeedom de votre Maître et de votre (vos) Esclave (s) et les récupérer sur votre PC/NAS....
+* Faire une sauvegarde SD/Disque de votre Maître et de votre (vos) esclave (s) et les récupérer sur votre PC/NAS....
+
+== Migration
+NOTE: Ne pas supprimer pour l'instant les anciens équipements "esclaves" sur le Maître.
+
+=== Installer le plugin "Jeedom Link" sur le Maître.
+
+
+2- Reinstallation de(s) l'Esclave(s) :
+Installer un Jeedom neuf sur l'ancien Esclave (C'est recommandé afin de repartir sur des bases saines)
+Mettre à jour le Jeedom Esclave à la dernière version (Même si aucune mise à jour ne vous est proposée). Si vous êtes parti de l'image pour Rapbery Pi 2.0.0.1, faites la mise à jour en mode Forcé.
+Mettre le /tmp en RAM (tmpfs).
+Vérifier dans la page Santé que la configuration réseau interne de l'Esclave est OK (Et externe si vos Jeedoms seront distants).
+Installation et activation du plugin "Jeedom Link" sur l'Esclave.
+Configuration dans le plugin "Jeedom Link" du jeedom distant (Ancien Maître).
+Installation et activation des plugins que vous souhaiter utiliser. (Il est conseillé de les faire un par un en vérifiant bien à chaque fois que les dépendances et les démons éventuel sont OK)
+Recréer l'arborescence des objets (Juste ceux qui vont vous être utiles) du Maître dans l'Esclave
+
+----
+
+Il ne vous reste plus qu'a installer jeedom en suivant https://www.jeedom.com/doc/documentation/installation/fr_FR/doc-installation.html#_autre[ceci]
