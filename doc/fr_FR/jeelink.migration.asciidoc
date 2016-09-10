@@ -31,18 +31,24 @@ En fonction des plugins installés sur votre Jeedom esclave, il est nécessaire 
 NOTE: Ne pas supprimer pour l'instant les anciens équipements "esclaves" sur le Maître.
 
 === Installer le plugin "Jeedom Link" sur le Maître.
+Sur votre Jeedom Maitre, "Plugins" => "Gestion des plugins" : 
 
+image::../images/jeelink.migration1.png[]
 
-2- Reinstallation de(s) l'Esclave(s) :
-Installer un Jeedom neuf sur l'ancien Esclave (C'est recommandé afin de repartir sur des bases saines)
-Mettre à jour le Jeedom Esclave à la dernière version (Même si aucune mise à jour ne vous est proposée). Si vous êtes parti de l'image pour Rapbery Pi 2.0.0.1, faites la mise à jour en mode Forcé.
-Mettre le /tmp en RAM (tmpfs).
-Vérifier dans la page Santé que la configuration réseau interne de l'Esclave est OK (Et externe si vos Jeedoms seront distants).
-Installation et activation du plugin "Jeedom Link" sur l'Esclave.
-Configuration dans le plugin "Jeedom Link" du jeedom distant (Ancien Maître).
-Installation et activation des plugins que vous souhaiter utiliser. (Il est conseillé de les faire un par un en vérifiant bien à chaque fois que les dépendances et les démons éventuel sont OK)
-Recréer l'arborescence des objets (Juste ceux qui vont vous être utiles) du Maître dans l'Esclave
+=== Reinstallation de(s) l'Esclave(s) :
 
-----
+NOTE: si vous disposer d'un Raspbery supplémentaire et d'une carte SD, vous pouvez procéder la réinstallation du nouveau Jeedom/JeeLink en parallèle sans avoir à toucher à votre Jeedom/Eslave existant
 
-Il ne vous reste plus qu'a installer jeedom en suivant https://www.jeedom.com/doc/documentation/installation/fr_FR/doc-installation.html#_autre[ceci]
+WARNING: Si vous utiliser votre raspbery existant, veuillez être certain d'avoir suivi le chapitre sauvegarde de cette documentation.
+
+NOTE: si vous utiliser le raspberry existant, nous vous conseillons d'utiliser une carte SD/microSD neuve.
+
+* Installer un Jeedom neuf sur l'ancien Esclave (C'est recommandé afin de repartir sur des bases saines)
+* Mettre à jour le Jeedom Esclave à la dernière version (Même si aucune mise à jour ne vous est proposée). Si vous êtes parti de l'image pour Rapbery Pi 2.0.0.1, faites la mise à jour en mode Forcé.
+* Mettre le /tmp en RAM (tmpfs).
+* Vérifier dans la page Santé que la configuration réseau interne de l'Esclave est OK (Et externe si vos Jeedoms seront distants).
+* Installation et activation du plugin "Jeedom Link" sur l'Esclave.
+* Configuration dans le plugin "Jeedom Link" du jeedom distant (Ancien Maître).
+* Installation et activation des plugins que vous souhaiter utiliser. (Il est conseillé de les faire un par un en vérifiant bien à chaque fois que les dépendances et les démons éventuel sont OK)
+* Recréer l'arborescence des objets (Juste ceux qui vont vous être utiles) du Maître dans l'Esclave
+
