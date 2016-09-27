@@ -92,3 +92,14 @@ Définir le nom, l'ID, l'objet parent, le type d'équipement et le modèle en vo
 Recommencer pour tous vos équipements de ce type.
 
 image::../images/jeelink.migration3.png[]
+
+image::../images/jeelink.migration4.png[]
+
+image::../images/jeelink.migration5.png[]
+
+image::../images/jeelink.migration6.png[]
+
+image::../images/jeelink.migration7.png[]
+
+image::../images/jeelink.migration8.png[]
+
