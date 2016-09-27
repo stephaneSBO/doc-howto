@@ -1,14 +1,14 @@
 = Migration mode esclave Jeedom vers JeeLink
 
-Nous allons voir ici comment migrer une installation de Jeedom en mode esclave vers une Jeedom en mode JeeLink.
-Le mode esclave Jeedom étant abandoné lors du passage de Jeedom 2.5, il est nécessaire de procéder à la migration sur le nouveau mode de fonctionnement.
+Nous allons voir ici comment migrer une installation avec Jeedom en mode esclave vers un Jeedom avec le plugin JeeLink.
+Le mode esclave Jeedom étant abandonné au passage de Jeedom à la version 2.5, il est nécessaire de procéder à la migration vers le nouveau mode de fonctionnement. Oui  Oe 
 
 == Préparation avant migration
-WARNING: Il est important de lire l'intégralité de ce chapitre avant de vous lancer de la migration. Des informations importantes concernant la mise à jour prérequis, la sauvegarde et la récupération d'information sont indispensables à la bonne compréhension de l'opération à mener. Vous abstenir de lire cette documentation peut entrainer des opérations destructives sur votre installation.
+WARNING: Il est important de lire l'intégralité de ce chapitre avant de vous lancer dans la migration. Des informations importantes concernant les prerequis de mise à jour, la sauvegarde et la récupération d'informations sont indispensables à la bonne compréhension de l'opération à mener. Vous abstenir de lire cette documentation peut entrainer des opérations destructives sur votre installation.
 
-NOTE: Pour une meilleur lecture et comprehension de ce tutoriel voici les termes utilisés : +
+NOTE: Pour une meilleur lecture et compréhension de ce tutoriel, voici les termes utilisés : +
   +
-- *Jeedom Maître* : aucun changement, ce serveur est et reste le serveur historique qui centralisait les équipements des *Jeedom Esclaves* et centralise désormais ceux des *Jeedom Distant* +
+- *Jeedom Maître* : aucun changement, ce serveur est le serveur historique qui centralisait les équipements des *Jeedom Esclaves* et centralise désormais ceux des *Jeedom Distant* + 
    Les copies d'écran sur fond noir correspondent au *Jeedom Maitre* +
    +
 - *Jeedom Esclave* : ancien mode de fonctionnement +
@@ -17,7 +17,7 @@ NOTE: Pour une meilleur lecture et comprehension de ce tutoriel voici les termes
    Les copies d'écran sur fond blanc correspondent au *Jeedom Distant* +
 
 
-=== Mises à jour et Verifification Configuration
+=== Mises à jour et Vérification de la Configuration
 
 * Mettre à jour le *Jeedom Maître* à la dernière version (Même si aucune mise à jour ne vous est proposée).
 * Mettre à jour les plugins du *Jeedom Maître* aux dernières version disponibles.
@@ -30,17 +30,17 @@ En fonction des plugins installés sur votre *Jeedom esclave*, il est nécessair
 * Dans la page santé du plugin zwave sur le Maître, choisir votre esclave dans le menu déroulant et faire une copie d'écran pour disposer d'une liste des équipements qui viennent de l'esclave.
 * Noter pour chaque équipement venant de l'esclave : L'objet parent, Le nom, L'ID (Node), Le Modèle.
 
-==== Plungin RFXcom
+==== Plugin RFXcom
 * Noter pour chaque équipement venant de l'esclave : L'objet parent, Le nom, L'ID (Logique), Le Type, Le Modèle.
 
 === Sauvegardes préventives 
-* Faire une sauvegarde Jeedom de votre Maître et de votre (vos) Esclave (s) et les récupérer sur votre PC/NAS....
-* Faire une sauvegarde SD/Disque de votre Maître et de votre (vos) esclave (s) et les récupérer sur votre PC/NAS....
+* Faire une sauvegarde Jeedom de votre Maître et de votre (vos) Esclave(s) et récupérer celle(s)-ci sur votre PC/NAS....
+* Faire une sauvegarde SD/Disque de votre Maître et de votre (vos) Esclave(s) et les récupérer sur votre PC/NAS....
 
 Une fiche non exhaustive des informations à noter pour la migration est disponible link:../images/MemoMigration.xls[ici]
 
 == Migration
-NOTE: Ne pas supprimer pour l'instant les anciens équipements de *l'esclave* sur le Maître.
+NOTE: Ne pas supprimer pour l'instant les anciens équipements de *l'Esclave* sur le Maître.
 
 === Installer le plugin "Jeedom Link" sur le Maître.
 Sur votre Jeedom Maitre, "Plugins" => "Gestion des plugins" : 
@@ -49,7 +49,7 @@ image::../images/jeelink.migration1.png[]
 
 === Installation du Jeedom Distant :
 
-NOTE: si vous disposer d'un Raspbery supplémentaire et d'une carte SD, vous pouvez procéder l'installation du nouveau *Jeedom Distant*  en parallèle sans avoir à toucher à votre *Jeedom Eslave* existant
+NOTE: si vous disposer d'un Raspberry supplémentaire et d'une carte SD, vous pouvez procéder l'installation du nouveau *Jeedom Distant*  en parallèle sans avoir à toucher à votre *Jeedom Esclave* existant
 
 WARNING: Si vous utiliser votre raspbery existant, veuillez être certain d'avoir suivi le chapitre sauvegarde de cette documentation.
 
