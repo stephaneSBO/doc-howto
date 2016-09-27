@@ -132,7 +132,7 @@ Dans l'onglet *Commandes* vous accéder à tous les paramètres des commandes de
 
 image::../images/jeelink.migration8.png[]
 
-Vous pouvez procéder la la reconfiguration des scénarios qui utilisaient ces équipements historiquement sur le Jeedom Esclave.
+NOTE: Vous pouvez procéder la la reconfiguration des scénarios qui utilisaient ces équipements historiquement sur le Jeedom Esclave.
 
 == Ménage du Jeedom Maître
 
