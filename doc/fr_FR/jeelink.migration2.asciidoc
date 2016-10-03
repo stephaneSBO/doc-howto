@@ -61,7 +61,7 @@ WARNING: Si vous utiliser votre raspbery existant, veuillez être certain d'avoi
 
 NOTE: si vous utilisez le Raspberry existant qui est actuellement un esclave, nous vous conseillons d'utiliser une carte SD/microSD neuve. Cela vous permettra de faire retour arrière facilement si besoin.
 
-* Installer un nouveau Jeedom sur une nouvelle carte SD (que cela soit pour mettre dans votre *Jeedom Esclave* existant ou pour un nouveau Raspberry) en suivant la documentation d'installation (lien à mettre)
+* Installer un nouveau Jeedom sur une nouvelle carte SD (que cela soit pour mettre dans votre *Jeedom Esclave* existant ou pour un nouveau Raspberry) en suivant la https://www.jeedom.com/doc/documentation/installation/fr_FR/doc-installation.html[documentation d'installation].
 * Mettre à jour le *Jeedom Source* à la dernière version (Même si aucune mise à jour ne vous est proposée)
 * Vérifier dans la page Santé que la configuration réseau interne (et externe si besoin) du *Jeedom Source* est OK.
 
@@ -80,12 +80,16 @@ image::../images/jeelink.migration2.png[]
 
 == Configuration des équipements sur le *Jeedom Source*
 
-Pour procéder à la migration d'un équipement du mode esclave vers le mode JeeLink, il est nécessaire que ce dernier soit déjà opérationnel sur votre *Jeedom Source*.
+Pour procéder à la migration d'un équipement du mode esclave vers le mode JeeLink, il est nécessaire que ce dernier soit déjà opérationnel sur votre Jeedom distant (pas l'ancien esclave, mais le nouveau *Jeedom distant*).
+ +
+ NOTE: Penser au fur et à mesure à désactiver l'historisation des commandes info de chaque équipement se trouvant sur le jeedom diastant afin d'économiser la carte SD de celui-ci. (L'historisation se fera sur l'ancien Maître)
+ +
+ NOTE: Vous pouvez aussi assigner les équipements aux objets recréés sur le jeedom distant afin qu'ils soient plus tard mis automatiquement dans le bon objet sur l'ancien maître lors de la déclaration dans le plugin "JeeLink". En cas de doublon de nom avec un équipement déjà présent dans les objets de l'ancien Maître, le plugin ajoutera "remote XXXX" au nom de l'équipement.
 
 === Plugin Zwave :
 
 Cliquer sur le bouton "Synchroniser" afin de récupérer les modules associés à votre contrôleur. (Ils sont gardés dans la mémoire de celui-ci)
-Renommer vos modules et les placer dans les souhaités en vous aidant du mémo de migration.
+Renommer vos modules et les placer dans les objets souhaités en vous aidant du mémo de migration.
 
 === Plugin Rfxcom :
 
@@ -101,7 +105,7 @@ Recommencer pour tous vos équipements de ce type.
 
 == Configuration du plugin Jeelink
 
-Le plugin Jeelink installé sur le *Jeedom Source* et le *Jeedom Cible* permettra la remontée des équipements sur votre maitre.
+Le plugin Jeelink installé sur le *Jeedom Source* permettra la remontée des équipements sur le *Jeedom Cible* (votre ancien maître).
 
 NOTE: Rappel, pour une meilleur lecture et comprehension de ce tutoriel : +
    +
