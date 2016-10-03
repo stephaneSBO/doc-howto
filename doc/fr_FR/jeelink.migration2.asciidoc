@@ -69,7 +69,7 @@ NOTE: si vous utilisez le Raspberry existant qui est actuellement un esclave, no
 
 * Changer le mot de passe de l'utilisateur admin ou configurer un nouvel utilisateur
 * Configurer votre compte Jeedom Market (Configuration => Mises à jour et fichiers => onglet "Market". Cliquer sur tester après avoir sauvegarder, pour valider la saisie de vos identifiants Jeedom Market)
-* Installation et activation du plugin "Jeedom Link" sur le nouveau *Jeedom Distant*
+* Installation et activation du plugin "Jeedom Link" sur le nouveau *Jeedom Source*
 
 image::../images/jeelink.migration2.png[]
 
@@ -78,7 +78,7 @@ image::../images/jeelink.migration2.png[]
 * Installation et activation des plugins que vous souhaitez utiliser. (Il est conseillé de les faire un par un, en vérifiant bien à chaque fois que les dépendances et les démons éventuels sont OK)
 * Recréer l'arborescence des objets (Juste ceux qui vont vous être utiles) du Jeedom Cible (ancien Maître) sur votre nouveau *Jeedom Source* (ancien esclave)
 
-== Configuration des équipements sur le *Jeedom Distant*
+== Configuration des équipements sur le *Jeedom Source*
 
 Pour procéder à la migration d'un équipement du mode esclave vers le mode JeeLink, il est nécessaire que ce dernier soit déjà opérationnel sur votre *Jeedom Source*.
 
