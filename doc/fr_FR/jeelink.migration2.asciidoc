@@ -11,13 +11,12 @@ IMPORTANT: Faites bien attention de ne pas faire de boucle d'équipement en conf
 
 NOTE: Pour une meilleur lecture et compréhension de ce tutoriel, voici les termes utilisés : +
   +
-- *Jeedom C* : aucun changement, ce serveur est le serveur historique qui centralisait les équipements des *Jeedom Esclaves* et centralise désormais ceux des *Jeedom Distant* + 
-   Les copies d'écran sur fond noir correspondent au *Jeedom Maitre* +
+- *Jeedom Cible* : Serveur (votre ancien Jeedom Maître) qui centralise les équipements du/des *Jeedom(s) Source(s)* + 
+   Les copies d'écran sur fond noir correspondent au *Jeedom Cible* +
    +
-- *Jeedom Esclave* : ancien mode de fonctionnement +
+- *Jeedom Source* : Serveur (votre/vos ancien(s) Jeedom Esclave) qui remonte vos équipements sur le *Jeedom Cible* +
+- Les notions de *Jeedom Maître* et *Jeedom Esclave* ne sont plus d'actualité. Le nouveau mode de fonctionnement de synchronisation d'équipements entre plusieurs Jeedoms est bi-directionnel (un serveur Jeedom peut être désormais *Source* et *Cible*) alors que l'ancien mode ne permettait que la remonté des équipements de l'esclave vers le maitre +
   +
-- *Jeedom Distant* : nouveau mode de fonctionnement qui remplace le mode Esclave +
-   Les copies d'écran sur fond blanc correspondent au *Jeedom Distant* +
 
 
 === Mises à jour et Vérification de la Configuration
