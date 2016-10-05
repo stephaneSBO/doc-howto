@@ -181,6 +181,8 @@ NOTE: Afin d'éviter de revenir plusieurs fois sur la même commande, les opéra
 
 == Ménage sur le *Jeedom Cible*
 
+NOTE: Après avoir bien validé que vos équipements/scénarios/interactions/virtuels/.... fonctionnent bien avec le nouveau système jeelink, vous pouvez procéder au ménage.
+
 * Supprimer les équipements résiduels de l'ancien *Jeedom Esclave*.
 * Désactiver et supprimer les plugins qui ne vous sont plus utiles (Ceux dont vous n'aviez que des équipements sur l'Esclave).
 * Dans le plugin "Jeedom Link", renommer les équipements qui pourraient avoir un nom finissant par "remote XXXX".
